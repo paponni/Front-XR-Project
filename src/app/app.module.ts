@@ -17,6 +17,8 @@ import {NgxSpinnerModule} from "ngx-spinner";
 import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ToastrModule} from 'ngx-toastr';
+import { StreamComponent } from './components/stream/stream/stream.component';
+import { TicketComponent } from './components/ticket/ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import {ToastrModule} from 'ngx-toastr';
     CartComponent,
     CheckoutComponent,
     ProductComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    StreamComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,

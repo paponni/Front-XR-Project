@@ -651,11 +651,98 @@ color: #FFFFFF;
   color: #FFFFFF;  
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
 
+.container-stream{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  .text-stream{
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: -100%;
+  }
+.streaming{
+  position: relative;
+  margin-top: 500px;
+}
+.image-stream{
+  display: block;
+  justify-content: space-between;
+}
+.navigation{
+  margin-top: 22px;
+}
+  
+  section .navigation li{
+    list-style: none;
+    cursor: pointer;
+    margin: 0 12px;
+    border-radius: 4px;
+    padding: 3px 3px 0;
+    opacity: 0.7;
 
 
+  }
+  section .navigation li img{
+   transition: 0.5s;
 
 
+  }
+  section .navigation li img:hover{
+opacity: 1; 
+ 
+   }
+   .ellipse{
+    position: absolute;
+    width: 457px;
+    height: 457px;
+    left: 122px;
+    top: 1296px;
+    
+    background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #7F71B4 0%, #1F34E7 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    opacity: 0.3;
+    filter: blur(300px);
+   }
+   .ellipse2{
+    position: absolute;
+    width: 457px;
+    height: 457px;
+    left: 425px;
+    top: 1389px;
+    
+    background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #7F71B4 0%, #1F34E7 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    opacity: 0.3;
+    filter: blur(300px);
+   }
+   .ellipse3{
+    position: absolute;
+    width: 760px;
+    height: 760px;
+    left: 732px;
+    top: 1494px;
+   }
 
+
+.container-ticket{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.ticket-header{
+  
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  
+}
 
 /*----------------------------*\
 	Cart
