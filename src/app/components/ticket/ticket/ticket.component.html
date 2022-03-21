@@ -8,10 +8,45 @@
     
     <div class="container-ticket">
         <span class="ticket-header">Take your Ticket</span>
+        
     </div>
-        <div class="" *ngFor="">
-          <h2>Real Madrid vs Valencia FC</h2>
-        </div>
+    <div class="tickett">
+    <div class="affiche-ticket" *ngFor="let t of TICKETS">
+          <div class="ticketI">
+              <div class="nomMatch">
+                <span >{{t.nomMatch}}</span>
 
+              </div>
+              <div class="dateMatch">
+                <span >{{t.dateMatch}}</span><span >/{{t.heureMatch}}</span>
+              </div>
+              <div class="lieuMatch">
+                <span >{{t.lieuMatch}}</span>
+              </div>
+        </div>
+        <div class="footer-ticket">
+            <div class="nbrTicket">
+              {{t.nbrTickets}} Ticket remaining <br>for this event 
+            </div>
+            <div class="prix">
+              <strong>Prix : {{t.prix}} DH</strong>
+            </div>
+            <button class="btn-add">Add to panier</button>
+        </div>
+    </div>
+    <div class="video-demo">
+      <div class="ellipse3">
+      </div>
+      <div class="text-style">
+        <h2 class="text-demo">CREATE, PLAY, EXPLORE, WATCH</h2>
+        <p class="desc-demo">Conquer Leaderboards, crush workouts, create <br>with friends and more. 
+          Get lost in a growing library of VR classics and all-new experiences.
+        </p>
+    </div>
+      <div class="video">
+        <img src="../../../../assets/img/video_demo.png" alt="video demo">
+      </div>
+    </div>
+  </div>
 
 </section>

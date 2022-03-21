@@ -57,8 +57,7 @@ Table OF Contents
 
 body {
   position: absolute;
-width: 1440px;
-height: 4635px;
+height: auto;
 
 background: #000000;
 box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.5);
@@ -445,13 +444,13 @@ textarea.input {
 /*----------------------------*\
 	Logo
 \*----------------------------*/
-
+/* 
 #header {
   padding-top: 15px;
   padding-bottom: 50px;
   background-color: black;
-}
-
+} */
+/* 
 .header-logo {
 position: absolute;
 width: 88px;
@@ -588,7 +587,7 @@ font-weight: 300;
 font-size: 18px;
 color: #FFFFFF;
 
-}
+} */
 
 
 /* Home page */
@@ -612,13 +611,7 @@ color: #FFFFFF;
 
   color: #7F71B4;
 }
-.image-welcome{
-  position: absolute;
-width: 825.77px;
-height: 606.94px;
-left: 612px;
-top: 156.26px;
-}
+
 #desc-text{
 position: absolute;
 width: 468px;
@@ -739,19 +732,146 @@ opacity: 1;
 .ticket-header{
   
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   
 }
+.affiche-ticket{
+  margin: 30px 8px 30px 8px;
+
+}
+.tickett{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.ticketI{
+  padding: 9px;
+  width: auto;
+  height: 400px;
+  background-image: url("../img/stade.png");
+  border-radius: 4px;
+}
+.footer-ticket{
+  width: 525px;
+  background-color: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.nomMatch{
+
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 800 ;
+}
+.dateMatch{
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  position: static  ;
+  text-align: center;  
+}
+.lieuMatch{
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  position: static  ;  
+  text-align: center;
+}
+.nbrTicket{
+  margin-left: 22px;
+  color: black;
+  font-weight: 600;
+  font-style: normal;
+  margin: 12px;
+}
+.prix{
+  margin: 17px;
+}
+.btn-add{
+  color: #fff;
+  background-color: black;
+  font-size: 22px;
+  border: 1px #fff solid;
+  border-radius: 22px;
+  cursor: pointer;
+}
+.btn-add:hover{
+  background-color: #15181D;
+}
+.text-style{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.text-demo{
+  color: #fff;
+  font-weight: 700;
+  margin-top: 30px;
+  text-align: center;
+}
+.desc-demo{
+width: 659px;
+height: 87px;
+padding: auto;
+margin: 12px;
+font-family: 'Neometric';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+}
+.ellipse3{
+width: 760px;
+height: 760px;
+left: 379px;
+top: 2657px;
+
+background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #7B76B1 0%, #1F34E7 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+opacity: 0.2;
+filter: blur(300px);
+}
+.video{
+width: 1270px;
+height: 663px;
+left: 92px;
+top: 3144px;
+}
+footer{
+width: 100%;
+height: 592px;
+ 
+
+background: #7B76B1;
+opacity: 0.3;
+border: 2px solid #FFFFFF;
+box-sizing: border-box;
+backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 20px;
+}
+
+
 
 /*----------------------------*\
 	Cart
 \*----------------------------*/
+/* header{
+  display: flex;
+  justify-content: space-around;
+} */
+/* .header-ctn {
 
-.header-ctn {
-  float: right;
-  padding: 20px 0px;
-}
+  width: 100%;
+  height: 200px;
+  background-color: red;
+} */
 
 /* .header-ctn>div {
   display: inline-block;
@@ -777,7 +897,7 @@ opacity: 1;
   font-size: 12px;
 } */
 
-.header-ctn>div>a>.qty {
+/* .header-ctn>div>a>.qty {
   position: absolute;
   right: 15px;
   top: -10px;
@@ -789,11 +909,11 @@ opacity: 1;
   font-size: 10px;
   color: #FFF;
   background-color: #D10024;
-}
+} */
 
-.header-ctn .menu-toggle {
+/* .header-ctn .menu-toggle {
   display: none;
-}
+} */
 
 .cart-dropdown {
   position: absolute;
@@ -910,9 +1030,10 @@ opacity: 1;
   width: 100%;
 }
 
-.header-ctn li.nav-toggle {
-  display: none;
-}
+/* 
+
+
+*/
 
 /*----------------------------*\
 	responsive nav
@@ -2400,7 +2521,7 @@ opacity: 1;
     margin-top: 5px;
   }
   .header-logo {
-    float: none;
+    /* float: none; */
     text-align: center;
   }
   .header-logo .logo {
