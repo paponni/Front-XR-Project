@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&family=Roboto:wght@100;300&family=Source+Sans+Pro:wght@300&display=swap');
-/* 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@font-face {
+  font-family: Light;
+  src: url("../");
+}
+
+/*
 Template Name: Electro - HTML Ecommerce Template
 Author: yaminncco
 
@@ -429,7 +436,7 @@ textarea.input {
 /* .header-links li:last-child {
   margin-right: 0px;
 } */
-/* 
+/*
 .header-links li a {
   color: #FFF;
 } */
@@ -437,7 +444,7 @@ textarea.input {
 /* .header-links li a:hover {
   color: #D10024;
 } */
-/* 
+/*
 .header-links li i {
   color: #D10024;
   margin-right: 5px;
@@ -446,13 +453,13 @@ textarea.input {
 /*----------------------------*\
 	Logo
 \*----------------------------*/
-/* 
+/*
 #header {
   padding-top: 15px;
   padding-bottom: 50px;
   background-color: black;
 } */
-/* 
+/*
 .header-logo {
 position: absolute;
 width: 88px;
@@ -609,9 +616,42 @@ color: #FFFFFF;
   mix-blend-mode: screen;
 }
 #welcome{
-  font-weight: 700;
-  font-family: 'Neue Radial A Light';
-  color: #7F71B4;
+
+  position: absolute;
+  width: 516px;
+  height: 203px;
+  left: 137px;
+  top: 176px;
+  font-family: Neue Radial A Light ;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 64px;
+
+}
+.image-welcome{
+  position: absolute;
+  left: 760px;
+  top: 188.81px;
+}
+
+#together{
+  color: #8BD6C8;
+}
+#m{
+  position: absolute;
+  width: 72px;
+  height: 111px;
+  left: 65px;
+  top: 148px;
+
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 156px;
+
+  color: #8BD6C8;
 }
 
 #desc-text{
@@ -624,22 +664,44 @@ left: 130px;
 width: 500px;
 line-height: 17px;
 }
+/*.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}*/
+
+.image-welcome{
+  width: 1000px;
+  height: 240px;
+  transition: transform .2s;
+}
+.image-welcome:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
 #btn-homepage{
   position: absolute;
   width: 214px;
   height: 50px;
   left: 206px;
-  top: 550px;
-  background: linear-gradient(92.82deg, #2D3078 1.04%, #7F71B4 49.12%, #15181D 96.6%);
-  border-radius: 50px;
+  top: 500px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  background: transparent;
   line-height: 22px;
-  text-align: center;
-  color: #FFFFFF;  
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+  color: #ffff;
+  text-align: center;}
 
 .container-stream{
   display: flex;
@@ -653,7 +715,7 @@ line-height: 17px;
     font-style: normal;
     font-weight: 200;
     font-size: 48px;
-    line-height: 65px;    
+    line-height: 65px;
     color: #FFFFFF;
   }
 .streaming{
@@ -701,8 +763,8 @@ line-height: 17px;
 
   }
   section .navigation li img:hover{
-  opacity: 1; 
- 
+  opacity: 1;
+
    }
    .ellipse{
     position: absolute;
@@ -710,7 +772,7 @@ line-height: 17px;
     height: 457px;
     left: 122px;
     top: 1296px;
-    
+
     background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #7F71B4 0%, #1F34E7 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     opacity: 0.3;
     filter: blur(300px);
@@ -721,7 +783,7 @@ line-height: 17px;
     height: 457px;
     left: 425px;
     top: 1389px;
-    
+
     background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #7F71B4 0%, #1F34E7 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     opacity: 0.3;
     filter: blur(300px);
@@ -748,16 +810,16 @@ line-height: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 
 }
 
 .ticket-header{
-  
+
   color: #fff;
   font-size: 25px;
   font-weight: 500;
-  
+
 }
 .affiche-ticket{
   margin: 30px 8px 30px 8px;
@@ -794,13 +856,13 @@ line-height: 17px;
   font-size: 20px;
   position: relative;
   position: static  ;
-  text-align: center;  
+  text-align: center;
 }
 .lieuMatch{
   color: #fff;
   font-size: 20px;
   position: relative;
-  position: static  ;  
+  position: static  ;
   text-align: center;
 }
 .nbrTicket{
@@ -1066,7 +1128,7 @@ text-align: center;
   width: 100%;
 }
 
-/* 
+/*
 
 
 */
