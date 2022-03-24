@@ -40,7 +40,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [HeaderComponent, ],
+  declarations: [ ],
   imports: [
     CommonModule,
     MatCheckboxModule,

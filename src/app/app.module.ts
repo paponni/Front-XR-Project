@@ -21,11 +21,11 @@ import { StreamComponent } from './components/stream/stream/stream.component';
 import { TicketComponent } from './components/ticket/ticket/ticket.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
@@ -35,7 +35,9 @@ import {MatFormFieldModule} from '@angular/material/form-field'
     ProductComponent,
     ThankyouComponent,
     StreamComponent,
+    HeaderComponent,
     TicketComponent,
+  
   
   ],
   imports: [
@@ -49,6 +51,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
+    MatIconModule,
     ToastrModule.forRoot()
 
   ],

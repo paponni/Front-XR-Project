@@ -7,6 +7,7 @@
             <!-- <nav>
               <ul>
                 <li><a href="">TICKETS</a></li></ul>
+                <i class="fa fa-search"></i>
             </nav> -->
             <div class="actions">
               <ul>
@@ -14,10 +15,14 @@
                 <li><a href="">STREAMING</a></li>
                 <li><a href="">COMPTE</a></li>
                 <li><a href="">MES ACHATS </a></li>
-                <li> <input type="text" name="search" id="search">
-                  <button type="submit"><i class="fa fa-search"></i></button></li>
                 <li>
-                  
+                  <div class="search-box">
+                    <button class="btn-search"><mat-icon aria-hidden="false" [ngStyle]="{'color':'white'}">search</mat-icon></button>
+                    <input type="text" class="input-search" placeholder="Search">
+                  </div>
+                </li>
+                <li>
+                  <mat-icon aria-hidden="false" [ngStyle]="{'color':'white'}">menu</mat-icon>
                 </li>
               </ul>
             </div>
