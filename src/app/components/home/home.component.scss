@@ -1,84 +1,58 @@
-// .welcome-text{
-//   padding: 60px 50px 50px 50px ;
-//   width: 482px;
-//   height: 216px;
-//   left: 179px;
-//   top: 227px;
-//   font-family: 'Poppins';
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 28px;
-//   line-height: 54px;
-//   color: #fff;
-//   mix-blend-mode: screen;
+// .home{
+//   background-image: url("../../../assets/img/background-home.png");
+//   background-repeat: no-repeat;
+//   background-position: 80%;
+//   height: 925px;
+//   width: auto;
 // }
-// #welcome{
-//   font-weight: 700;
+// .container{
+//   width: 850px;
+//   height: 546px;
+//   margin-top: 150px;
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//   border: 3px solid;
 
-//   color: #7F71B4;
-// }
-// .image-welcome{
-//   position: absolute;
-// width: 300px;
-// height: 606.94px;
-// left: 612px;
-// top: 156.26px;
-// }
-// #btn-homepage{
-//   position: absolute;
-//   width: 214px;
-//   height: 50px;
-//   left: 206px;
-//   top: 643px;
-//   background: linear-gradient(92.82deg, #2D3078 1.04%, #7F71B4 49.12%, #15181D 96.6%);
-//   border-radius: 50px;
-//   font-family: 'Montserrat';
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 18px;
-//   line-height: 22px;
-//   text-align: center;
-//   color: #FFFFFF;  
-//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
-
-// .homepage{
-//   padding-top: 174px;
-//   background-color: #000;
-//   height: auto;
-//   padding-bottom: 100px;
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .homepage .homepage-text{
   
-//   margin-left: 179px;
-//   font-family: 'Poppins';
-//   font-style: normal;
-//   font-weight: 800;
-//     // font-size: 36px;
-//   line-height: 54px;  
+// background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0.55%, rgba(255, 255, 255, 0) 100%);
+// backdrop-filter: blur(42px);
+
+// border-radius: 25px;
+
 // }
 
-// .homepage .homepage-text span{
-//   color: #fff;
-//   }
-//   .homepage img{
-//     width: 650px;
-//   }
-// #welcome-text{
-//   color:#7F71B4;
-//   font-weight: 800;
-//   font-size: 35px;
+// .welcome{
+// font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 300;
+// font-size: 36px;
+// line-height: 54px;
+// color: #FFFFFF;
 // }
-// #welcome-text-1{
-//   font-weight: 500;
-//   font-size: 30px;
+// .welcom-desc{
+// font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 22px;
+// line-height: 33px;
+// color: #FFFFFF;
 // }
-#welcome-desc{
-  font-size: 10px;
-  width: 468px;
-  height: 51px;
-}
+// .btn-start{
+//   color: #FFFFFF;
+//   border: 1px solid #FFFFFF;
+//   border-radius: 7px;
+//   padding: 12px;
+//   background-color: transparent;
+// }
+// .ellipse{
+// width: 417px;
+// height: 416px;
+// left: 240px;
+// top: 593px;
+// background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #7F71B4 0%, #1F34E7 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+// opacity: 0.3;
+// filter: blur(300px);
+// }
+
 .container{
   &{
     display: grid;

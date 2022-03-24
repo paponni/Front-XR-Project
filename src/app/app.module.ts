@@ -19,6 +19,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ToastrModule} from 'ngx-toastr';
 import { StreamComponent } from './components/stream/stream/stream.component';
 import { TicketComponent } from './components/ticket/ticket/ticket.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatFormFieldModule} from '@angular/material/form-field'
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { TicketComponent } from './components/ticket/ticket/ticket.component';
     ProductComponent,
     ThankyouComponent,
     StreamComponent,
-    TicketComponent
+    TicketComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,8 @@ import { TicketComponent } from './components/ticket/ticket/ticket.component';
     NgxSpinnerModule,
     ReactiveFormsModule,
     FormsModule,
+    MatCardModule,
+    MatFormFieldModule,
     ToastrModule.forRoot()
 
   ],

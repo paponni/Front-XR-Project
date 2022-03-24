@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TicketService } from 'src/app/services/ticket.service';
 
 @Component({
   selector: 'mg-ticket',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticket.component.scss']
 })
 export class TicketComponent implements OnInit {
-
+    Tickets!:any;
    TICKETS = [
     {
       nomMatch : "Real Madrid vs Valencia FC",
@@ -46,9 +47,17 @@ export class TicketComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private ticketService : TicketService) { }
 
   ngOnInit(): void {
+    this.ticketService.findAll()
+    .subscribe(
+      (data)=>{
+        console.log(data);
+        this.Tickets=data;
+      },
+      (error) => console.log(error)
+    )
   }
 
 }
