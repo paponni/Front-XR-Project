@@ -1,23 +1,22 @@
 
 <section>
-    <div class="ellipse">
-    </div>
-    
-    <div class="ellipse2">
-    </div>
+
     
     <div id="ticket" class="container-ticket">
         <span class="ticket-header">Upcoming events </span>
+        <span class="ticket-desc">Take a look on available tickets et get yours now before sold out</span>
         
     </div>
     <div class="tickett">
     <div class="affiche-ticket" *ngFor="let t of TICKETS">
+      <div class="ticketContainer">
           <div class="ticketI">
               <div class="nomMatch">
                 <span >{{t.nomMatch}}</span>
 
               </div>
               <div class="dateMatch">
+                <mat-icon>calendar_today</mat-icon>
                 <span >{{t.dateMatch}}</span><span >/{{t.heureMatch}}</span>
               </div>
               <div class="lieuMatch">
@@ -26,12 +25,13 @@
         </div>
         <div class="footer-ticket">
             <div class="nbrTicket">
-              {{t.nombreTicket}} Ticket remaining <br>for this event 
+              {{t.nombreTicket}} Ticket remaining
             </div>
             <div class="prix">
               <strong>Prix : {{t.prix}} DH</strong>
             </div>
             <button class="btn-add">Add to panier</button>
+        </div>
         </div>
     </div>
     <div class="video-demo">

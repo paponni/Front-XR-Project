@@ -1,0 +1,56 @@
+
+.streaming{
+    position: relative;
+    margin-top: 350px;
+  }
+.text-replay{
+margin-left: 40px;
+font-family: 'Neue Radial A Light';
+font-style: normal;
+font-weight: 300 ;
+font-size: 20px;
+line-height: 24px;
+color: #FFFFFF;
+}
+
+
+.desc-replay{
+    margin-top: 12px;
+    margin-left: 40px  ;
+    font-family: 'Neue Radial A Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+
+}
+.container-stream{
+  margin: 12px;
+    background-image: url('../../../../assets/img/replay1.png');
+    width: 371px;
+    height: 230px;
+  }
+.replay-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nom-match{
+color: #fff;
+font-family: 'Neue Radial-A-Regular';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+ }
+ .dateMatch{
+font-family: 'neueRadial-B-ExtraBoldItalic';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+ }
+

@@ -21,7 +21,7 @@ import { StreamComponent } from './components/stream/stream/stream.component';
 import { TicketComponent } from './components/ticket/ticket/ticket.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from '@angular/material/form-field'
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [

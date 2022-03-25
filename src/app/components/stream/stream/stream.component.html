@@ -1,31 +1,13 @@
 <section class="streaming">
-    <span class="text-stream">Streams</span><br>
-    <div class="link-live">
-        
-        <a href="" style="border-bottom: 3px solid #fff;">LIVE </a> 
-        <a href=""><div id="cercle"></div>
-        </a>
-
-        <a href="">View all streams</a>
+    <span class="text-replay">Replays</span><br>
+    <span class="desc-replay">Feeling sorry because of a missed game ? No problem, we offer you many replays in a VR streaming</span> 
+    <div class="replay-container">
+        <div class="container-stream" *ngFor="let replay of REPLAYS">  
+             
+                <span class="nom-match">{{replay.nomMatch}}</span> <br>
+                <span class="dateMatch">{{replay.dateMatch}}</span> 
+            <!-- <mat-icon >play_arrow</mat-icon> -->
+        </div>
     </div>
-    
-    <div class="container-stream">   
-            <ul class="navigation">
-                <li>
-                        
-                <a href="">
-                    <img src="../../../../assets/img/stade1.jpg" alt="" width="475" height="255">                                                                              
-                </a>
-                </li>
-                <li>   
-                    <a href="">
-                        <img src="../../../../assets/img/unsplash_SEQ2VI0KI6A.png" width="475" height="255" alt="">                                                                              
-                    </a>
-                    </li>
-            </ul>
-           
-        
-    </div>
-
-    
+     
 </section>

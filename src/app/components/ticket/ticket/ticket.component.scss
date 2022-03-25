@@ -1,0 +1,104 @@
+.container-ticket{
+    margin-top: 300px;
+    display: flex;
+    margin-left: 252px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .ticket-header{
+
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Neue Radial A Light'; 
+  }
+  .ticket-desc{
+    color: #fff;
+    font-family: 'Neue Radial A Light'; 
+    font-style: normal;
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .tickett{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+  }
+  .affiche-ticket{
+    margin: 30px 8px 30px 8px;
+  }
+  
+  .ticketI{
+    padding: 9px;
+    width: auto;
+    height: 206.73px; 
+    background-image: url("../../../../assets/img/ticket1.png");
+    background-repeat: no-repeat;
+  }
+
+  .footer-ticket{
+    background-color: #fff;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nomMatch{
+  
+    color: #FFF;
+    text-align: center;
+    font-family: 'Neue Radial A Light'; 
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .dateMatch{
+    margin-top: 33px;
+    color: #fff;
+    position: relative;
+    position: static  ;
+    text-align: center;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+  }
+  .lieuMatch{
+    margin-top: 12px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    
+  }
+  .nbrTicket{
+    margin-left: 22px;
+    color: black;
+    font-weight: 600;
+    font-style: normal;
+    margin: 12px;
+  }
+  .prix{
+    margin: 17px;
+  }
+  .btn-add{
+    color: #fff;
+    background-color: black;
+    font-size: 12px;
+    border: 1px #fff solid;
+    border-radius: 22px;
+    cursor: pointer;
+  }
+  .btn-add:hover{
+    background-color: #15181D;
+  }
