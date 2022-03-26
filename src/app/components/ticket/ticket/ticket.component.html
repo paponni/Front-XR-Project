@@ -1,10 +1,9 @@
 
-<section>
+<section class="ticket-section"> 
 
-    
     <div id="ticket" class="container-ticket">
-        <span class="ticket-header">Upcoming events </span>
-        <span class="ticket-desc">Take a look on available tickets et get yours now before sold out</span>
+        <p class="ticket-header">Upcoming events </p>
+        <p class="ticket-desc">Take a look on available tickets et get yours now before sold out</p>
         
     </div>
     <div class="tickett">
@@ -12,29 +11,28 @@
       <div class="ticketContainer">
           <div class="ticketI">
               <div class="nomMatch">
-                <span >{{t.nomMatch}}</span>
-
+                <span >{{t.nomMatch}}</span><br>
+                <img src="../../../../assets/img/line.svg"/> 
               </div>
+              
               <div class="dateMatch">
-                <mat-icon>calendar_today</mat-icon>
-                <span >{{t.dateMatch}}</span><span >/{{t.heureMatch}}</span>
+                
+                <span ><img src="../../../../assets/img/calendar.svg"/>{{t.dateMatch}}</span><span >/{{t.heureMatch}}</span>
               </div>
               <div class="lieuMatch">
-                <span >{{t.lieuMatch}}</span>
+                <span ><img src="../../../../assets/img/position.svg"/>{{t.lieuMatch}}</span>
               </div>
         </div>
         <div class="footer-ticket">
             <div class="nbrTicket">
-              {{t.nombreTicket}} Ticket remaining
+              <img src="../../../../assets/img/chrono.svg"/>
+              {{t.nbrTickets}} tickets remaining...
             </div>
-            <div class="prix">
-              <strong>Prix : {{t.prix}} DH</strong>
-            </div>
-            <button class="btn-add">Add to panier</button>
+            <button class="btn-add" >Add to cart <img src="../../../../assets/img/cart.svg"/></button>
         </div>
         </div>
     </div>
-    <div class="video-demo">
+    <!-- <div class="video-demo">
       <div class="ellipse3">
       </div>
       <div class="text-style">
@@ -44,7 +42,7 @@
         </p>
     </div>
         <img class="video"src="../../../../assets/img/video_demo.png" alt="video demo">
-    </div>
+    </div> -->
   </div>
 
 </section>
