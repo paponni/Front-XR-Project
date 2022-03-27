@@ -4,10 +4,12 @@
     <div class="replay-container">
         <div class="container-stream" *ngFor="let replay of REPLAYS">  
              
-                <span class="nom-match">{{replay.nomMatch}}</span> <br>
-                <span class="dateMatch">{{replay.dateMatch}}</span> 
-            <!-- <mat-icon >play_arrow</mat-icon> -->
+                <p class="nom-match">{{replay.nomMatch}}</p> <br>
+                <p class="dateMatch">{{replay.dateMatch}}</p> 
+            
+            <a href=""><mat-icon [ngStyle]="{'color' : 'black','margin-left': '186px','margin-top': '28px'}" >play_arrow</mat-icon> </a>
         </div>
+
     </div>
      
 </section>
