@@ -2,8 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @font-face {
-  font-family: Light;
-  src: url("../");
+  font-family: 'neueRadial-A-Light';
+  src: url("src/assets/fonts/Neue Radial A Light Italic.ttf");
 }
 
 /*
@@ -64,10 +64,7 @@ Table OF Contents
 \*----------------------------*/
 
 
-@font-face {
-  font-family: 'Neue Radial A Light';
-  src: url(../fonts/Neue\ Radial\ A\ Light.ttf);
-}
+
 
 body {
   position: absolute;
@@ -86,7 +83,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #D10024;
+  color: #8BD6C8;
   text-decoration: none;
   outline: none;
 }
@@ -607,7 +604,7 @@ color: #FFFFFF;
   height: 216px;
   left: 179px;
   top: 227px;
-  font-family: 'Poppins';
+  font-family: 'poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -616,13 +613,11 @@ color: #FFFFFF;
   mix-blend-mode: screen;
 }
 #welcome{
-
   position: absolute;
   width: 516px;
   height: 203px;
   left: 137px;
   top: 176px;
-  font-family: Neue Radial A Light ;
   font-style: normal;
   font-weight: 300;
   font-size: 54px;
@@ -637,6 +632,7 @@ color: #FFFFFF;
 
 #together{
   color: #8BD6C8;
+  font-style: normal;
 }
 #m{
   position: absolute;
@@ -644,24 +640,20 @@ color: #FFFFFF;
   height: 111px;
   left: 65px;
   top: 148px;
-
   font-family: 'Monda';
   font-style: normal;
   font-weight: 400;
   font-size: 96px;
   line-height: 156px;
-
   color: #8BD6C8;
 }
 
 #desc-text{
-  font-family: 'Neue Radial A Light';
-font-size: 12px;
+font-size: 20px;
 position: absolute;
 color: #fff;
 top: 400px;
 left: 130px;
-width: 500px;
 line-height: 17px;
 }
 /*.zoom {
@@ -806,7 +798,7 @@ line-height: 17px;
 
 
 .container-ticket{
-  margin-top: 100px;
+  margin-top: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -901,7 +893,6 @@ line-height: 17px;
 .desc-demo{
 width: 659px;
 height: 87px;
-padding: auto;
 margin: 12px;
 font-family: 'Neometric';
 font-style: normal;
@@ -927,33 +918,6 @@ width: 1000px;
 height: 600px;
 left: 92px;
 top: 3144px;
-}
-footer{
-width: 100%;
-height: 592px;
-background: #7B76B1;
-opacity: 0.3;
-border: 2px solid #FFFFFF;
-box-sizing: border-box;
-backdrop-filter: blur(30px);
-border-radius: 20px;
-}
-#footer-desc{
-  margin-top: 126px;
-color: #fff;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 50px;
-text-align: center;
-}
-.footer-links{
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 
@@ -2232,7 +2196,7 @@ text-align: center;
 }
 
 .reviews .review-heading .review-rating>i.fa-star {
-  color: #D10024;
+  color: #8D99AE;
 }
 
 .reviews-pagination {
@@ -2253,12 +2217,12 @@ text-align: center;
 
 .reviews-pagination li:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #8D99AE;
 }
 
 .reviews-pagination li.active {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #8D99AE;
+  border-color: #8D99AE;
   color: #FFF;
   cursor: default;
 }
@@ -2302,7 +2266,7 @@ text-align: center;
 }
 
 .review-form .input-rating .stars>label:hover:before, .review-form .input-rating .stars>label:hover~label:before {
-  color: #D10024;
+  color: #8D99AE;
 }
 
 .review-form .input-rating .stars>input:checked label:before, .review-form .input-rating .stars>input:checked~label:before {
@@ -2324,7 +2288,7 @@ text-align: center;
 
 .order-details {
   position: relative;
-  padding: 0px 30px 30px;
+  padding: 0px 20px 20px;
   border-right: 1px solid #E4E7ED;
   border-left: 1px solid #E4E7ED;
   border-bottom: 1px solid #E4E7ED;
@@ -2473,9 +2437,20 @@ text-align: center;
 /*=========================================================
 	11 -> FOOTER
 ===========================================================*/
-
+.line{
+  margin: 40px;
+  width: 1257px;
+  height: 0px;
+  border: 0.1px solid #FFFFFF;
+}
+.line1{
+  margin: 40px 40px 0px 40px;
+  width: 1257px;
+  height: 0px;
+  border: 0.2px solid #FFFFFF;
+}
 #footer {
-  background: #15161D;
+  margin-top: 0px;
   color: #B9BABC;
 }
 
@@ -2486,12 +2461,27 @@ text-align: center;
 .footer {
   margin: 30px 0px;
 }
+.logo{
+  margin-bottom: 50px;
+  width: 11px;
+  height: 11px;
+}
+.icons ul{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-right: 40px;
 
+}
+.icons ul li {
+
+}
 .footer .footer-title {
   color: #FFF;
   text-transform: uppercase;
   font-size: 18px;
-  margin: 0px 0px 30px;
+  margin: 0px 0px 10px;
 }
 
 .footer-links li+li {
@@ -2510,15 +2500,28 @@ text-align: center;
 }
 
 .footer-links li a:hover {
-  color: #D10024;
+  color: #8BD6C8
+;
 }
 
-.copyright {
-  margin-top: 30px;
+#copyright {
+  margin: 40px 40px 40px 40px;
   display: block;
   font-size: 12px;
 }
-
+#privacy {
+  margin: 40px 40px 40px 680px;
+  display: block;
+  font-size: 12px;
+}
+#service{
+  margin: 40px 40px 40px 40px;
+  display: block;
+  font-size: 12px;
+}
+#right{
+  position: center;
+}
 .footer-payments li {
   display: inline-block;
   margin-right: 5px;
