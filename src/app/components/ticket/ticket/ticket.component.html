@@ -8,8 +8,10 @@
     </div>
     <div class="tickett">
     <div class="affiche-ticket" *ngFor="let t of TICKETS">
-      <div class="ticketContainer">
-          <div class="ticketI">
+      
+        <div class="ticketContainer">
+          <a href="/ticket/{{t.id}}">
+          <div class="ticketI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%), url(../../../assets/img/'+t.image+') center','background-size':'400px 300px'}">
               <div class="nomMatch">
                 <span >{{t.nomMatch}}</span><br>
                 <img src="../../../../assets/img/line.svg"/> 
@@ -22,27 +24,19 @@
               <div class="lieuMatch">
                 <span ><img src="../../../../assets/img/position.svg"/>{{t.lieuMatch}}</span>
               </div>
+           
         </div>
+      </a>
         <div class="footer-ticket">
             <div class="nbrTicket">
               <img src="../../../../assets/img/chrono.svg"/>
               {{t.nbrTickets}} tickets remaining...
             </div>
-            <button class="btn-add" >Add to cart <img src="../../../../assets/img/cart.svg"/></button>
+            <button class="btn-add" (click)="addToCart(t.id)" >Add to cart <img src="../../../../assets/img/cart.svg"/></button>
         </div>
         </div>
+      
     </div>
-    <!-- <div class="video-demo">
-      <div class="ellipse3">
-      </div>
-      <div class="text-style">
-        <h2 class="text-demo">CREATE, PLAY, EXPLORE, WATCH</h2>
-        <p class="desc-demo">Conquer Leaderboards, crush workouts, create <br>with friends and more. 
-          Get lost in a growing library of VR classics and all-new experiences.
-        </p>
-    </div>
-        <img class="video"src="../../../../assets/img/video_demo.png" alt="video demo">
-    </div> -->
   </div>
 
 </section>

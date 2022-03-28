@@ -1,0 +1,38 @@
+
+<section class="ticket-section"> 
+
+    <div id="ticket" class="container-ticket">
+        <p class="ticket-header">Upcoming events </p>
+        <p class="ticket-desc">Take a look on available tickets et get yours now before sold out</p>
+        
+    </div>
+    <div class="tickett">
+    <div class="affiche-ticket" *ngFor="let t of TICKETS">
+      <a href="/ticket/{{t.id}}">
+        <div class="ticketContainer">
+        <div class="ticketI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%), url(../../../assets/img/'+t.image+') center','background-size':'400px 300px'}">
+            <div class="nomMatch">
+              <span >{{t.nomMatch}}</span><br>
+              <img src="../../../../assets/img/line.svg"/> 
+            </div>
+            
+            <div class="dateMatch">
+              
+              <span ><img src="../../../../assets/img/calendar.svg"/>{{t.dateMatch}}</span><span >/{{t.heureMatch}}</span>
+            </div>
+            <div class="lieuMatch">
+              <span ><img src="../../../../assets/img/position.svg"/>{{t.lieuMatch}}</span>
+            </div>
+      </div>
+      <div class="footer-ticket">
+          <div class="nbrTicket">
+            <img src="../../../../assets/img/chrono.svg"/>
+            {{t.nbrTickets}} tickets remaining...
+          </div>
+          <button class="btn-add" >Add to cart <img src="../../../../assets/img/cart.svg"/></button>
+      </div>
+      </div></a>
+    </div>
+  </div>
+
+</section>

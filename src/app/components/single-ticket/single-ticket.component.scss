@@ -5,9 +5,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
   }
   .ticket-header{
 
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Neue Radial A Light'; 
+  }
+  .ticket-proccess{
+    margin-left: 115px;
     color: #fff;
     font-size: 25px;
     font-weight: 500;
@@ -34,13 +42,11 @@
   
   .ticketI{
     padding: 9px;
-    width: 400px;
-    height: 300px;
-    border-radius: 22px;
-    background-image:linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%);
-    background-repeat: no-repeat;
-    background-position: center;
-   
+    width: 1133.83px;
+    height: 683.25px;
+      box-shadow: inset 0px 144px 134px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 52px;
+  background: linear-gradient(180deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
   }
 
   .footer-ticket{
@@ -53,18 +59,22 @@
     border-bottom-left-radius: 22px;
     border-bottom-right-radius: 22px;
   }
-  .nomMatch{
+  .prix-single-ticket{
     margin-top: 24px;
     margin-left: 25px;
     margin-right: 38px;
     color: #FFF;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 550;
-    font-size: 16.433px;
-    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+font-family: 'neueRadial-A-ExtraLight';
+font-style: normal;
+font-weight: 200;
+font-size: 24px;
+line-height: 26px;
+letter-spacing: -0.022em;
+color: #FFFFFF;
   }
-  .dateMatch{
+  .param-single-ticket{
     margin-top: 33px;
     color: #fff;
      font-family: 'Neue Radial-A-Regular';
@@ -72,16 +82,17 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 0px;
+    float: right;
   }
   .lieuMatch{
     margin-top: 20px;
     color: #fff;
-    position: relative;
-    font-family: 'Neue Radial-A-Regular';
+      font-family: 'Neue Radial-A-Regular';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 0px;
+    height: 800px;
     
   }
   .nbrTicket{
@@ -115,9 +126,7 @@
 
   }
  
-.btn-add:hover{
- background:  linear-gradient(180deg, #6854f8 0%, #281b5a 100%)
-}
+
 
 mat-icon{
   transform: scale(0.75);

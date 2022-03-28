@@ -7,15 +7,25 @@ import {CartComponent} from "./components/cart/cart.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {ProductComponent} from "./components/product/product.component";
 import {ThankyouComponent} from "./components/thankyou/thankyou.component";
+import { ListTiketsComponent } from './components/list-tikets/list-tikets.component';
+import { SingleTicketComponent } from './components/single-ticket/single-ticket.component';
 
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent
   },
+  
   {
     path: 'login', component: LoginComponent
   },
+  {
+    path: 'tickets', component: ListTiketsComponent
+  },
+  {
+    path: 'ticket/:id', component: SingleTicketComponent
+  },
+ 
   {
     path: 'register', component: RegisterComponent
   },
