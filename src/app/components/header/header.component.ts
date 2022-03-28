@@ -8,18 +8,18 @@ import {CartModelServer} from "../../models/cart.model";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  cartData: CartModelServer;
-  cartTotal: Number;
-
+  
+  totalItem : number = 0;
   constructor(public cartService: CartService) {
   }
 
   ngOnInit() {
-  this.cartService.cartTotal$.subscribe(total => {
-    this.cartTotal = total;
-  });
+    this.cartService.getTickets()
+    .subscribe((res)=>{
+      this.totalItem=res.length;
+    })
 
-  this.cartService.cartDataObs$.subscribe(data => this.cartData = data);
+
   }
 
 }

@@ -25,6 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ListTiketsComponent } from './components/list-tikets/list-tikets.component';
 import { SingleTicketComponent } from './components/single-ticket/single-ticket.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SingleTicketComponent } from './components/single-ticket/single-ticket.
     TicketComponent,
     ListTiketsComponent,
     SingleTicketComponent,
+    ExperienceComponent,
   
   
   ],

@@ -1,4 +1,4 @@
-<header> 
+<header style="position: fixed;width: 100%;height: 64px;z-index: 10;"> 
             <div class="logo">
               <a routerLink="/" >
                 <img src="../../../assets/img/animateitlogo.png" alt="">
@@ -22,8 +22,8 @@
                   </div>
                 </li>
                 <li>
-                  <div id="cercle">3</div>
-                  <img src="../../../../assets/img/cart.svg" style="transform: scale(2);"/>
+                  <div id="cercle">{{totalItem}}</div>
+                 <a href=""> <img src="../../../../assets/img/cart.svg" style="transform: scale(2);"/></a>
                 </li>
               </ul>
             </div>
