@@ -40,7 +40,6 @@ export class HomeComponent implements OnInit {
   }
 
   AddProduct(id: Number) {
-    this.cartService.AddProductToCart(id);
   }
 
   selectProduct(id: Number) {

@@ -8,10 +8,7 @@ import {FooterComponent} from './components/footer/footer.component';
 import {HomeComponent} from './components/home/home.component';
 import {LoginComponent} from './components/login/login.component';
 import {RegisterComponent} from './components/register/register.component';
-import {CartComponent} from './components/cart/cart.component';
-import {CheckoutComponent} from './components/checkout/checkout.component';
 import {HttpClientModule} from "@angular/common/http";
-import {ProductComponent} from './components/product/product.component';
 import {ThankyouComponent} from './components/thankyou/thankyou.component';
 import {NgxSpinnerModule} from "ngx-spinner";
 import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
@@ -26,6 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ListTiketsComponent } from './components/list-tikets/list-tikets.component';
 import { SingleTicketComponent } from './components/single-ticket/single-ticket.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { ZoneComponent } from './components/zone/zone.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +32,6 @@ import { ExperienceComponent } from './components/experience/experience.componen
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    CartComponent,
-    CheckoutComponent,
-    ProductComponent,
     ThankyouComponent,
     StreamComponent,
     HeaderComponent,
@@ -44,6 +39,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
     ListTiketsComponent,
     SingleTicketComponent,
     ExperienceComponent,
+    ZoneComponent,
   
   
   ],
