@@ -1,11 +1,98 @@
-mat-card {
-    max-width: 400px;
+.login-comp{
+  width: 100%;
+  height: 800px;
+  background-image: url(../../../assets/img/back-login.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.login-container{
+  margin-top: 44px;
+background: rgba(88, 130, 193, 0.28);
+// opacity: 0.7;
+backdrop-filter: blur(25px);
+border-radius: 15px;
+width: 500px;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
   
-    margin: 2em auto;
-  
-    text-align: center;
-  }
-  
-  mat-form-field {
-    display: block;
-  }
+}
+#login-head{
+font-family: 'neueRadial-A-ExtraLight';
+font-style: normal;
+font-weight: 400;
+font-size: 38px;
+line-height: 45px;
+
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.login-label{
+  margin-top: 12px;
+  font-family: 'Neue Radial A Light';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.login-label2{
+  margin-top: 5px;
+  margin-left: 8px;
+  font-family: 'Neue Radial A Light';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 21px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+
+}
+.login-input{
+  background: #FFFFFF;
+border: 1px solid #BCBEC0;
+box-sizing: border-box;
+border-radius: 10px;
+width: 400px;
+height: 50px;
+text-indent: 10px;
+}
+::placeholder{
+  color: #BCBEC0;
+  margin-left: 7px;
+  font-family: 'Neue Radial A Light';
+}
+.login-btn{
+width: 250px;
+height: 50px;
+background: #4ECB71;
+border-radius: 10px;
+font-family: 'Neue Radial A Light';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+border: 1px solid white;
+
+color: #FFFFFF;
+}
+.login-btn:hover{
+  background-color: #09fd4e;
+  color: white;
+}
+.login-link-register{
+  margin-left: 12px;
+  color: #8EDAFF;
+}

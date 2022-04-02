@@ -7,6 +7,10 @@ import {ThankyouComponent} from "./components/thankyou/thankyou.component";
 import { ListTiketsComponent } from './components/list-tikets/list-tikets.component';
 import { SingleTicketComponent } from './components/single-ticket/single-ticket.component';
 import { ZoneComponent } from './components/zone/zone.component';
+import { CompteComponent } from './components/compte/compte.component';
+import { AchatsComponent } from './components/achats/achats.component';
+import { LoginActivateGuard } from './guards/login-activate.guard';
+
 
 
 const routes: Routes = [
@@ -18,7 +22,13 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
+    path: 'achats', component: AchatsComponent,canActivate:[LoginActivateGuard]
+  },
+  {
     path: 'tickets', component: ListTiketsComponent
+  },
+  {
+    path: 'compte', component: CompteComponent,canActivate:[LoginActivateGuard]
   },
   {
     path: 'ticket/:id', component: SingleTicketComponent

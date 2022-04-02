@@ -1,0 +1,124 @@
+.register-comp {
+  margin-top: 100px;
+	width: 100%;
+	height: 700px;
+	background-image: url(../../../assets/img/back-login.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.register-container {
+	background: rgba(88, 130, 193, 0.28);
+	// opacity: 0.7;
+	backdrop-filter: blur(25px);
+	border-radius: 15px;
+	width: 500px;
+	height: 570px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#register-head {
+	font-family: 'neueRadial-A-ExtraLight';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 38px;
+	line-height: 45px;
+
+	display: flex;
+	align-items: center;
+
+	color: #ffffff;
+}
+.register-label {
+	margin-top: 12px;
+	font-family: 'Neue Radial A Light';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+
+	color: #ffffff;
+}
+.register-label2 {
+	margin-top: 5px;
+	margin-left: 8px;
+	font-family: 'Neue Radial A Light';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+}
+.register-input {
+	background: #ffffff;
+	border: 1px solid #bcbec0;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 400px;
+	height: 50px;
+	text-indent: 10px;
+}
+.register-fullname {
+	background: #ffffff;
+	border: 1px solid #bcbec0;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 170px;
+	height: 50px;
+	text-indent: 10px;
+}
+::placeholder {
+	color: #bcbec0;
+	font-family: 'Neue Radial A Light';
+}
+.register-btn {
+	margin-top: 22px;
+	width: 250px;
+	height: 50px;
+	background: #4ecb71;
+	border-radius: 10px;
+	font-family: 'Neue Radial A Light';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	border: 1px solid white;
+
+	color: #ffffff;
+}
+.register-btn:hover {
+	background-color: #09fd4e;
+	color: white;
+}
+.register-link-register {
+	margin-left: 12px;
+	color: #8edaff;
+}
+
+.register-pass {
+	background: #ffffff;
+	border: 1px solid #bcbec0;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 170px;
+	height: 50px;
+	text-indent: 10px;
+}
+.password-ctn {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+.fullname-ctn {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}

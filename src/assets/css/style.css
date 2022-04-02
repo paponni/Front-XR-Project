@@ -18,6 +18,11 @@
   font-family: 'neueRadial-A-ExtraLight';
   src: url(../fonts/Neue\ Radial\ A\ Extra\ Light.ttf);
 }
+
+@font-face {
+  font-family: 'neueRadial-A-Black';
+  src: url(../fonts/Neue\ Radial\ A\ Black.ttf);
+}
 /*
 Template Name: Electro - HTML Ecommerce Template
 Author: yaminncco
