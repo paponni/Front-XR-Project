@@ -1,0 +1,58 @@
+.achat-header {
+	margin-top: 130px;
+	width: 300px;
+	margin-left: 68px;
+}
+
+#achat-label {
+	font-family: 'Neue Radial-A-Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #ffffff;
+}
+#desc-label{
+font-family: 'neueRadial-A-Light';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+}
+.achat-body{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 1180px;
+    height: 400px;
+    border: 1px solid #ffffff;
+    display: flex;
+}
+.sidebar-body{
+    background: #182335;
+        width: 250px ;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+}
+.sidebar-body a{
+    margin-left: 20px;
+}
+.sidebar-body a p img{
+    margin-right: 12px;
+}
+.core-achat{    
+    background-image: url('../../../assets/img/back-achat.svg');
+    width: 930px ;
+}
+
+#core-head{
+	font-family: 'Neue Radial-A-Regular';
+font-style: normal;
+font-weight: 400;
+font-size: 15.5111px;
+line-height: 18px;
+color: #FFFFFF;
+margin-top: 66px;
+    margin-left: 92px;
+}

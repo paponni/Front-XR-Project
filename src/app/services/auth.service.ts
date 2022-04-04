@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { registration } from '../models/registration.model';
 import { User } from '../models/user';
  
 @Injectable({
@@ -25,6 +26,10 @@ export class AuthService {
       headers : new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded')
     };
     return this.http.post<User>(this.apiURL+'/login',body.toString(),options);
+  }
+
+  register(registration:registration){
+    return this.http.post<string>(this.apiURL+'/api/v1/client/registration',registration);
   }
 
 
