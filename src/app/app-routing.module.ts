@@ -7,13 +7,15 @@ import {ThankyouComponent} from "./components/thankyou/thankyou.component";
 import { ListTiketsComponent } from './components/list-tikets/list-tikets.component';
 import { SingleTicketComponent } from './components/single-ticket/single-ticket.component';
 import { ZoneComponent } from './components/zone/zone.component';
+import { StreamingComponent } from './components/streaming/streaming.component';
+import {PersonalDetailsComponent} from "./personal-details/personal-details.component";
 
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent
   },
-  
+
   {
     path: 'login', component: LoginComponent
   },
@@ -26,12 +28,17 @@ const routes: Routes = [
   {
     path: 'ticket/:id/zone', component: ZoneComponent
   },
- 
+
   {
     path: 'register', component: RegisterComponent
   },
+  {
+    path: 'streaming', component: StreamingComponent
+  },
+  {
+    path: ':id/personal-details', component: PersonalDetailsComponent
+  },
 
-  
   {
     path: 'thankyou', component: ThankyouComponent
   }

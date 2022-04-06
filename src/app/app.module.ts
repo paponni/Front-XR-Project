@@ -24,6 +24,8 @@ import { ListTiketsComponent } from './components/list-tikets/list-tikets.compon
 import { SingleTicketComponent } from './components/single-ticket/single-ticket.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ZoneComponent } from './components/zone/zone.component';
+import { StreamingComponent } from './components/streaming/streaming.component';
+import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ZoneComponent } from './components/zone/zone.component';
     SingleTicketComponent,
     ExperienceComponent,
     ZoneComponent,
+    StreamingComponent,
+    PersonalDetailsComponent,
   
   
   ],
