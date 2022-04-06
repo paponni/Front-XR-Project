@@ -1,7 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { client } from '../models/client.model';
 import { registration } from '../models/registration.model';
 import { User } from '../models/user';
+import jwt_decode from 'jwt-decode';
+
  
 @Injectable({
   providedIn: 'root'
@@ -10,6 +13,7 @@ export class AuthService {
 
   apiURL :string = 'http://localhost:8080';
   token:string;
+  email:string;
   isloggedIn:boolean;
   user :User;
   constructor(private http:HttpClient) { }
@@ -33,6 +37,13 @@ export class AuthService {
   }
 
 
+  getClient(){
+    this.token  = localStorage.getItem('jwt');
+    this.email = jwt_decode(this.token)['sub'];
+    return this.http.get<client>(this.apiURL+'/api/v1/client/'+this.email );
+  }
+
+
   saveToken(jwt:string){
     this.token =jwt;
     this.isloggedIn = true;
@@ -50,6 +61,8 @@ export class AuthService {
   return !(jwt === null);
 
   }
+
+
 
   logout(){
     this.isloggedIn = false;

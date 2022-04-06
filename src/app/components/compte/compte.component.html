@@ -6,22 +6,28 @@
           <p class="info-head">My informtions</p>
           <div class="firstname">
             <p class="compte-label">First name : </p>
-            <p class="compte-label">KALILA</p> 
+            <p class="compte-label">{{CLIENT.prenom}}</p> 
           </div>
           <div class="firstname">
             <p class="compte-label">Last name :</p>
-            <p class="compte-label">Mehdi</p> 
+            <p class="compte-label">{{CLIENT.nom}}</p> 
           </div>
           <div class="firstname">
             <p class="compte-label">E-mail :</p>
-            <p class="compte-label">Mehdi.kalila55@gmail.com</p> 
+            <p class="compte-label">{{CLIENT.email}}</p> 
           </div>
           <div class="firstname">
             <p class="compte-label">Phone number : </p>
-            <p class="compte-label">07 13 53 99 76</p> 
+            <p class="compte-label">{{CLIENT.tel}}</p> 
           </div>
+          <div>
+            <a href="/login">
+              <button class="compte-btn" (click)="logout()">Log out</button>
+            </a>
+          </div>
+          
         </div>
-        <div class="compte-edit">
+        <!-- <div class="compte-edit">
           <p class="info-head">Edit informations</p>
           <div class="firstname">
             <p class="compte-label">Civility : </p>
@@ -30,9 +36,6 @@
         
         
        
-        
-        </div>
-        <a href="/login">
-               <button class="compte-btn" (click)="logout()">Log out</button>
-      </a>
+        </div> -->
+      
 </section>

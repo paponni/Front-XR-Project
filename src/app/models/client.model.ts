@@ -1,8 +1,11 @@
 export class client{
     id:number;
-    firstname:string;
-    lastname:string;
+    nom:string;
+    prenom:string;
     email:string;
     password:string;
+    adresse:string;
+    tel:string;
+    ville:string
 
 }
