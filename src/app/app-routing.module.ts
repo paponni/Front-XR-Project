@@ -10,6 +10,7 @@ import { ZoneComponent } from './components/zone/zone.component';
 import { CompteComponent } from './components/compte/compte.component';
 import { AchatsComponent } from './components/achats/achats.component';
 import { LoginActivateGuard } from './guards/login-activate.guard';
+import { CartComponent } from './components/cart/cart.component';
 
 
 
@@ -26,6 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'tickets', component: ListTiketsComponent
+  },
+  {
+    path: 'cart', component: CartComponent
   },
   {
     path: 'compte', component: CompteComponent,canActivate:[LoginActivateGuard]

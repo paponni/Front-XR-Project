@@ -26,6 +26,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ZoneComponent } from './components/zone/zone.component';
 import { CompteComponent } from './components/compte/compte.component';
 import { AchatsComponent } from './components/achats/achats.component';
+import {CartComponent} from './components/cart/cart.component'
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AchatsComponent } from './components/achats/achats.component';
     ZoneComponent,
     CompteComponent,
     AchatsComponent,
+    CartComponent
   
   
   ],

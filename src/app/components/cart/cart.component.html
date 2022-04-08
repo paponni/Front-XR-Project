@@ -1,0 +1,75 @@
+<section class="cart-container">
+<p id="cart-header">Your shopping cart</p>
+<p id="cart-desc">Check your shopping</p>
+<div>
+    <table>
+        <thead>
+          <tr>
+                    <th scope="col">Ticket Detail</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quantite</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td ></td>
+            <td>29,00 EUR</td>
+            <td style="display: flex;justify-content: center;flex-direction: row;">
+                <button (click)="minus()" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <input type="text" [value]="quantity" class="input-quantity">
+                <button (click)="plus()" class="btn-quantity"><mat-icon>add</mat-icon></button>
+            </td>
+            <td>29.00 EUR</td>
+            <td><mat-icon>delete</mat-icon></td>
+          </tr>
+          <tr>
+            <td ></td>
+            <td>29,00 EUR</td>
+            <td style="display: flex;justify-content: center;flex-direction: row;">
+                <button (click)="minus()" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <input type="text" [value]="quantity" class="input-quantity">
+                <button (click)="plus()" class="btn-quantity"><mat-icon>add</mat-icon></button>
+            </td>
+            <td>29.00 EUR</td>
+            <td><mat-icon>delete</mat-icon></td>
+          </tr>
+        </tbody>
+       
+      </table>
+</div>
+
+<div class="cart-total">
+    <div class="cart-total-ctn">
+        <div style="display: flex;
+        justify-content: space-between; width: 300px;">
+            <p class="cart-total-desc">Sub total  </p>
+            <p class="cart-total-desc">£316.55</p>
+
+        </div>
+        <div style="display: flex;
+        justify-content: space-between; width: 300px;">
+        <p class="cart-total-desc">Shipping </p>
+        <p class="cart-total-desc">Free</p>
+
+        </div>
+        <div style="display: flex;
+        justify-content: space-between; width: 300px;">
+        <p class="cart-total-desc">Total </p>
+        <p class="cart-total-desc">£73.98 </p>
+
+        </div>
+    </div>
+<div>
+    <p class="cart-total-desc">Discount code</p>
+    <input type="text" class="input-checkout">
+    <button class="apply-btn">Apply</button>
+    <div>
+        <button class="btn-checkout">CHECK OUT</button>
+    </div>
+
+</div>
+    
+</div>
+</section>
