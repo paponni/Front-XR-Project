@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'mg-cart',
@@ -8,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class CartComponent implements OnInit {
 
   quantity:number = 1;
-  constructor() { }
+  listItems : any; 
+  constructor(private router : Router , private cartService : CartService) { }
 
   ngOnInit(): void {
+    this.cartService.viewCart()
+    .subscribe((data)=>{
+      this.listItems=data['bufcartList'];
+      console.log(data['bufcartList']);
+    })
   }
 
 

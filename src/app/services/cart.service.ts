@@ -1,5 +1,8 @@
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import { tick } from '@angular/core/testing';
+import {BehaviorSubject, Observable} from "rxjs";
+import { serverResponse } from '../models/serverResponse.model';
 
 
 @Injectable({
@@ -9,9 +12,13 @@ import {BehaviorSubject} from "rxjs";
 
 export class CartService {
 
+  apiUrl = 'http://localhost:8080';
+  token : string;
+  options : any;
+
 public cartItemList : any =[];
 public ticketList = new BehaviorSubject<any>([]);
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   getTickets(){
@@ -25,11 +32,45 @@ public ticketList = new BehaviorSubject<any>([]);
 
 
   addtoCart(ticket:any){
-    this.cartItemList.push(ticket);
-    this.ticketList.next(this.cartItemList);
-    this.getTotalPrice();
-    console.log(this.cartItemList);
+    // this.cartItemList.push(ticket);
+    // this.ticketList.next(this.cartItemList);
+    // this.getTotalPrice();
+    // console.log(this.cartItemList);
+    // console.log()
+     this.token = localStorage.getItem('jwt');
+    console.log(this.token)
+     this.options = {
+      headers : new HttpHeaders().set('Authorization','Bearer '+this.token)
+    };
+    let params = new HttpParams();
+    params = params.append('id',ticket.id);
+
+    console.log(this.options)  
+    console.log(ticket.id)
+    return this.http.get<any>(this.apiUrl+'/api/v1/client/addToCart?id='+ticket.id,this.options)
+    .subscribe((data)=>console.log(data));
+
   }
+
+  viewCart(){
+    this.token = localStorage.getItem('jwt');
+    this.options = {
+      headers : new HttpHeaders().set('Authorization','Bearer '+this.token)
+    };
+    return this.http.get<any>(this.apiUrl+'/api/v1/client/viewCart',this.options)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   getTotalPrice(): number{
     let grandTotal =0 ;
