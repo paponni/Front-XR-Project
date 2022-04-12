@@ -25,48 +25,52 @@
         </div>
       </div>
       <div class="footer-zone">
-        <div class="row" *ngFor="let z of ZONES">
-          <div class="col-md-1 col-xs-12">
+        <div class="row" >
+          <div class="col-md-1 col-xs-12" >
+            <div class="zone-section" *ngFor="let z of ZONES">
             <label>Zone{{z.id}}</label>
             <select name="zone1" class="form-control">
               <option value="z1">1</option>
               <option value="z2">2</option>
               <option value="z4">4</option>
             </select>
+            </div>
 
           </div>
-          <div class="col-md-3 col-xs-6">
-            <div class="price">
-              <p>{{z.prix}}EUR <span>par ticket</span></p>
+          <div class="col-md-3 col-xs-6" >
+            <div class="price" *ngFor="let z of ZONES">
+              <p><span id="number">{{z.prix}}EUR &nbsp;</span>per ticket</p>
             </div>
           </div>
-          <div class="col-md-3 col-xs-6">
-            <div class="buy">
+          <div class="col-md-3 col-xs-6" >
+            <div class="buy" *ngFor="let z of ZONES">
               <a href="{{z.id}}/personal-details">
                 <button >Buy</button>
               </a>
             </div>
           </div>
-          </div>
-          <div class="col-md-1 mt-md-0 mt-1">
+          <div class="photo">
             <img class="zone-image" src="../../../assets/img/img_5.png">
           </div>
+        </div>
       </div>
 
       <div class="icons">
         <ul class="actions">
-          <li>
-            <a href="#">Share</a>
-          </li>
+            <p id="share">Share</p>
           <li><a href="#">
-            <img src="../../../assets/img/frame1.png" alt="">
+            <img src="../../../assets/img/facebook.png" alt="" width="30" height="30">
           </a></li>
           <li><a href="#">
-            <img src="../../../assets/img/frame2.png" alt="">
+            <img src="../../../assets/img/linkedin.png" alt="" width="30" height="30">
           </a></li>
           <li><a href="#">
-            <img src="../../../assets/img/frame3.png"
-                 alt="">
+            <img src="../../../assets/img/twiter.png"
+                 alt="" width="30" height="30">
+          </a></li>
+          <li><a href="#">
+            <img src="../../../assets/img/gmail.png"
+                 alt="" width="30" height="30">
           </a></li>
         </ul>
       </div>

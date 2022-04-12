@@ -36,7 +36,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
   flex-wrap: wrap;
 }
 .affiche-zone{
@@ -68,10 +67,6 @@
   border-radius: 10px;
   background: transparent;
   margin-left: 10px;
-  font-family: 'neueRadial-A-ExtraLight';
-  font-style: normal;
-  font-weight: 200;
-  font-size: 14px;
 
 }
 .prix-single-zone{
@@ -176,7 +171,20 @@ mat-icon{
   color: #fff;
   line-height: 0 !important;
 }
-
+.buy{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.buy button{
+  width: 70px;
+  height: 25px;
+  margin-top: 50px;
+  display: block;
+  background: #4ECB71;
+  border-color: transparent;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
 .right{
   position:relative;
   margin-left: 950px;
@@ -187,16 +195,10 @@ mat-icon{
   color: #FFFFFF;
 }
 .rightt{
-  margin-left: 910px;
+  position:relative;
+  margin-left: 920px;
   font-family: 'neueRadial-A-Regular';
   font-style: normal;
-  font-weight: 200;
-  font-size: 18px;
-  line-height: 0px;
-  /* or 0% */
-
-  text-align: justify;
-
   color: #FFFFFF;
 }
 .tax{
@@ -218,71 +220,32 @@ mat-icon{
   margin:10px;
 }
 .row{
-  margin-bottom: 15px;
-  margin-left: 2px;
-  font-weight: 200;
-  font-size: 18px;
-  font-family: 'neueRadial-A-Regular';
-  font-style: normal;
-  text-align: justify;
-  color: #FFFFFF;
-}
-.form-group input::placeholder{
-  font-family: 'neueRadial-A-Medium';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-  opacity: 0.6;
-}
-select option{
-  //background-color: #23272b;
-  color: #23272b;
-
-}
-input:focus, button:focus{
-  outline: none;
-  border: 1px solid #8BD6C8;
-}
-#blue{
-  color: #8BD6C8;
-}
-.form{
-  font-family: 'neueRadial-A-Regular';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  color: #FFFFFF;
-}
-.per-ticket{
-  font-family: 'neueRadial-B-BlackItalic';
-  font-style: normal;
-  font-weight: 10;
-  font-size: 14px;
-  line-height: 0px;
-  text-align: justify;
-  color: #FFFFFF;
+  margin-top:15px;
 }
 .infos{
   margin: 35px;
 }
 .form-control{
-  width: 69.77px;
-  height: 27.93px;
+  width: 79.77px;
+  height: 47.93px;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 8px;
   color: white;
-  margin-bottom: 30px;
 }
 #code{
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 8px;
+}
+input:focus, button:focus{
+  outline: none;
+  border: 1px solid #8BD6C8;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 .approx{
   position: absolute;
@@ -292,18 +255,23 @@ input:focus, button:focus{
   font-family: 'neueRadial-A-Regular';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 0px;
   text-align: justify;
   color: #FFFFFF;
-  margin-left:850px ;
+  margin-left:900px ;
 }
 #titre{
   color:white;
   margin-left: 220px;
 }
 .form{
-  margin-left: 200px;
+  font-family: 'neueRadial-A-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin:15px;
   color: white;
   display: flex;
   flex-direction: row;
@@ -311,10 +279,10 @@ input:focus, button:focus{
   align-items: flex-start;
 }
 .form-group{
-  margin: 20px;
+  margin-left: 10px;
 }
 .formc{
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 400.52px;
   height:50.86px;
   background: rgba(255, 255, 255, 0.2);
@@ -331,32 +299,93 @@ input:focus, button:focus{
   align-items: flex-start;
   margin-left: 100px;
 }
-#city{
-  width: 114px;
+#city, #day, #cvc{
+  width: 200px;
   height: 50.86px;
+}
+#expiration{
+  width:190px;
+}
+#nombre-ticket{
+  width:90px;
 }
 #zipcode{
   width:250px;
 }
+#blue{
+  color:#8BD6C8;
+}
 .payment{
   position: relative;
-  width: 229px;
+  width: 200px;
   height: 46px;
   border-color: transparent;
   background: linear-gradient(180deg, #4ECB71 0%, #4ECB71 35%, #4ECB71 100%);
   border-radius: 8px;
   color:white;
   margin-bottom: 50px;
+  margin-top: 50px;
+}
+.apply{
+  width: 80px;
+  height: 46px;
+  margin-left: 30px;
 }
 .button{
   margin-left: 840px;
 }
-.titre label{
-  font-family: 'neueRadial-A-Bold';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 26px;
-  letter-spacing: -0.022em;
+.day{
+  width:100px;
+}
+#card, #paypal{
+  width: 15.77px;
+  height: 15.06px;
+  color:#8BD6C8;
+}
+#paypal{
+  margin-left: 30px;
+}
+.card-icon{
+  width: 46.77px;
+  height: 34.06px;
+  margin: 10px;
+}
+.paypal-icon{
+  width: 127.77px;
+  height: 63.06px;
+  margin: 10px;
+}
+.text{
+  margin-left: 20px;
   color: #FFFFFF;
 }
+.cvc-icon{
+  width: 18px;
+  height: 18px;
+}
+
+.right-form{
+  margin-left: 200px;
+  margin-top:10px;
+  color:white;
+  width: 600px;
+}
+#code{
+  width:200px;
+}
+.nombre-ticket{
+  margin-top:10px;
+}
+#nombre-ticket{
+  margin-left:20px;
+}
+.col-lg-6 div{
+  margin-bottom: 30px;
+  margin-left: 30px;
+  font-family: 'neueRadial-A-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+

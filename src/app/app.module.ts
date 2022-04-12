@@ -26,6 +26,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ZoneComponent } from './components/zone/zone.component';
 import { StreamingComponent } from './components/streaming/streaming.component';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { PersonalDetailsComponent } from './personal-details/personal-details.co
     ZoneComponent,
     StreamingComponent,
     PersonalDetailsComponent,
+    PaymentComponent,
   
   
   ],

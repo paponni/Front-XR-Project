@@ -9,6 +9,7 @@ import { SingleTicketComponent } from './components/single-ticket/single-ticket.
 import { ZoneComponent } from './components/zone/zone.component';
 import { StreamingComponent } from './components/streaming/streaming.component';
 import {PersonalDetailsComponent} from "./personal-details/personal-details.component";
+import {PaymentComponent} from "./components/payment/payment.component";
 
 
 const routes: Routes = [
@@ -37,6 +38,9 @@ const routes: Routes = [
   },
   {
     path: ':id/personal-details', component: PersonalDetailsComponent
+  },
+  {
+    path: 'payment', component: PaymentComponent
   },
 
   {

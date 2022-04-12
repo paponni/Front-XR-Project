@@ -1,0 +1,99 @@
+<section class="zone-section" xmlns:color="http://www.w3.org/1999/xhtml">
+  <div id="zone" class="container-zone">
+    <p class="zone-header">Payment</p>
+    <p></p>
+    <p class="zone-proccess">Choose a game <img src="../../../assets/img/tiret.svg" alt="">
+      <span> Choose a zone</span> <img src="../../../assets/img/tiret.svg" alt="">
+      <span> Personal details</span> <img src="../../../assets/img/tiret.svg" alt="">
+      <span> Payement</span> </p>
+  </div>
+  <div class="zonet">
+    <div class="affiche-zone">
+      <div class="zoneContainer">
+        <div class="zoneI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%)   ,url(../../../assets/img/el-clasico.jpeg) center no-repeat','background-size':'1133.83px 683.25px'}">
+          <div class="prix-single-zone">
+            <p style="width: 200px;
+                text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Payement</p><br>
+            <p>Category : LIGA</p>
+          </div>
+          <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
+        </div>
+      </div>
+      <div class="form">
+        <div class="row">
+        <div class="form-group">
+          <input type="checkbox" id="card" name="card" checked>
+          <label for="card"><img class="card-icon" src="../../../assets/img/img_8.png" alt=""></label>
+          <input type="checkbox" id="paypal" name="paypal">
+          <label for="paypal"><img class="paypal-icon" src="../../../assets/img/img_7.png" alt=""></label>
+          <div><label for="name" >Name on card</label></div>
+          <input type="text" class="formc" id="name" name="name">
+          <div><label for="email">Card number</label></div>
+          <input type="text"  class="formc" id="email" name="alterEgo">
+        </div>
+          <div class="right-form">
+            <div><h2>Order Summary</h2></div>
+            <img width="500" height="220" src="../../../assets/img/img_6.png" alt="">
+            <div class="nombre-ticket"><label for="nombre-ticket">Barcelona F.C vs Real Madrid</label>
+              <input type="number" class="formc" value="1" id="nombre-ticket" name="tentacles" min="1" max="100">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="row">
+        <div class="form-group">
+          <div><label for="expiration">Expiration</label></div>
+          <input type="date" class="formc" id="expiration" name="trip-start"
+                 min="2022-01-01" max="2022-12-31">
+         <!-- <select class="formc"  id="expiration" name="power">
+            <option *ngFor="let mois of ['Marrakech','Rabat','Casa']" [value]="mois">{{mois}}</option>
+          </select>-->
+        </div>
+          <!--<div class="form-group">
+          <div><label for="day">.</label></div>
+          <input type="text" class="formc" id="day" name="alterEgo">
+        </div>-->
+        <div class="form-group">
+          <div><label for="cvc">CVC<img class="cvc-icon" src="../../../assets/img/img_9.png" alt=""></label></div>
+          <input type="text" class="formc" id="cvc" name="alterEgo">
+        </div>
+          <div class="right-form">
+          <div><h1>£320.45</h1></div>
+          <div><label for="code">Discount code</label></div>
+          <input type="text" id="code" name="name" class="formc" >
+          <button class="apply">Apply</button>
+          </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="text">
+        <p>By Clicking *Confirm Order* I agree to Animate It’s<span id="blue"> Terms of use.</span></p>
+      </div>
+        <div class="right-form">
+        <div class="row">
+        <div class="col-lg-6">
+          <div>Sub total</div>
+          <div>Tax</div>
+          <div>Shipping</div>
+          <div>Total</div>
+        </div>
+          <div class="col-lg-6 float-end">
+            <div>£316.55</div>
+            <div>£3.45</div>
+            <div>Free</div>
+            <div>£73.98</div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <a href="payment">
+          <button class="payment">Proced to payement</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+

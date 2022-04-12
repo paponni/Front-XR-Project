@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&family=Roboto:wght@100;300&family=Source+Sans+Pro:wght@300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @font-face {
-  font-family: Light;
-  src: url("../");
+  font-family: 'neueRadial-A-Regular';
+  src: url(../fonts/NeueRadialARegular.ttf);
 }
 @font-face {
-  font-family: 'Neue Radial-A-Regular';
-  src: url(../fonts/Neue\ Radial\ A\ Regular.ttf);
+  font-family: 'neueRadial-B-BlackItalic';
+  src: url(../fonts/NeueRadialBBlackItalic.ttf);
+}
+@font-face {
+  font-family: 'neueRadial-A-Bold';
+  src: url(../fonts/NeueRadialBBold.ttf);
 }
 
 @font-face {
   font-family: 'neueRadial-B-ExtraBoldItalic';
-  src: url(../fonts/Neue\ Radial\ B\ Extra\ Bold\ Italic.ttf);
+  src: url(../fonts/NeueRadialBExtraBoldItalic.ttf);
 }
 @font-face {
   font-family: 'neueRadial-A-ExtraLight';
-  src: url(../fonts/Neue\ Radial\ A\ Extra\ Light.ttf);
+  src: url(../fonts/NeueRadialAExtraLight.ttf);
 }
 /*
 Template Name: Electro - HTML Ecommerce Template
@@ -78,7 +80,7 @@ Table OF Contents
 
 @font-face {
   font-family: 'Neue Radial A Light';
-  src: url(../fonts/Neue\ Radial\ A\ Light.ttf);
+  src: url(../fonts/NeueRadialALight.ttf);
 }
 
 body {
@@ -315,8 +317,8 @@ textarea.input {
 \*----------------------------*/
 
 .section {
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .section-title {
@@ -715,7 +717,7 @@ color: #FFFFFF;
     left: 732px;
     top: 1494px;
    }
-   
+
    #cercle{
      margin-top: -40px;
      margin-right: -39px;
@@ -743,7 +745,6 @@ color: #FFFFFF;
 .desc-demo{
 width: 659px;
 height: 87px;
-padding: auto;
 margin: 12px;
 font-family: 'Neometric';
 font-style: normal;
@@ -2412,20 +2413,19 @@ text-align: center;
   }
  }
  .line{
-  margin: 40px 0px 0px 40px;
+   margin-top: 30px;
+  margin-left:40px;
   width: 1187px;
-  height: 0px;
-  border: 0.1px solid #FFFFFF;
+  border: 0.001px solid #FFFFFF;
 }
 .line1{
-  margin: 40px 0 0px 40px;
+  margin-left:40px;
   width: 1187px;
   height: 0px;
-  border: 0.2px solid #FFFFFF;
+  border: 0.001px solid #FFFFFF;
 }
 
 #footer {
-  margin-top: 0px;
   color: #B9BABC;
 }
 
@@ -2434,10 +2434,9 @@ text-align: center;
 }
 
 .footer {
-  margin: 30px 0px;
 }
 .logo-footer{
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   width: 11px;
   height: 11px;
 }
@@ -2446,51 +2445,50 @@ text-align: center;
   justify-content: flex-end;
   flex-direction: row;
   align-items: flex-end;
-  margin-right: 40px;
-
+  margin-right: 104px;
 }
 .icons ul li {
 
 }
-.footer .footer-title {
+ .footer-title {
   color: #FFF;
   text-transform: uppercase;
-  font-size: 18px;
-  margin: 0px 0px 10px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .footer-links li+li {
-  margin-top: 15px;
+
 }
 
 .footer-links li a {
   color: #B9BABC;
+  font-size: 12px;
 }
 
 .footer-links li i {
   margin-right: 15px;
   color: #D10024;
-  width: 14px;
+  width: 8px;
   text-align: center;
 }
 
 .footer-links li a:hover {
-  color: #8BD6C8
-;
+  color: #8BD6C8;
 }
 
 #copyright {
-  margin: 40px 40px 40px 40px;
+  margin: 4px 40px 4px 40px;
   display: block;
   font-size: 12px;
 }
 #privacy {
-  margin: 40px 40px 40px 680px;
+  margin: 4px 40px 4px 680px;
   display: block;
   font-size: 12px;
 }
 #service{
-  margin: 40px 40px 40px 40px;
+  margin: 4px 40px 4px 40px;
   display: block;
   font-size: 12px;
 }
@@ -2501,9 +2499,8 @@ text-align: center;
   display: inline-block;
   margin-right: 5px;
 }
-
 .footer-payments li a {
   color: #15161D;
-  font-size: 36px;
+  font-size: 15px;
   display: block;
 }

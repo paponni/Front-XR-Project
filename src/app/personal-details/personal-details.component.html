@@ -1,7 +1,6 @@
-<section class="zone-section">
+<section class="zone-section" xmlns:color="http://www.w3.org/1999/xhtml">
   <div id="zone" class="container-zone">
-    <p class="zone-header">Zone</p>
-    <p class="zone-desc">Take a look on available zones et get yours now before sold out</p>
+    <p class="zone-header">Personal details</p>
     <p></p>
     <p class="zone-proccess">Choose a game <img src="../../../assets/img/tiret.svg" alt="">
       <span> Choose a zone</span> <img src="../../../assets/img/tiret.svg" alt="">
@@ -14,24 +13,20 @@
         <div class="zoneI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%)   ,url(../../../assets/img/el-clasico.jpeg) center no-repeat','background-size':'1133.83px 683.25px'}">
           <div class="prix-single-zone">
             <p style="width: 200px;
-                text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Choose your zone</p><br>
+                text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Insert your personal details</p><br>
             <p>Category : LIGA</p>
           </div>
           <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
-
-          <!-- <div class="desc-single-zone">
-                <button class="btn-add" routerLink="/zone/1/zone"></button>
-           </div>-->
         </div>
       </div>
       <div class="footer-zone">
         <div class="infos">
-        <div class="row">
-          <label>Your ticket price</label>
+        <div class="titre">
+          <label>Your ticket price:</label>
         </div>
         <div class="row">
           <label>Zone{{ZONES[id-1].id}}</label>
-          <p class="rightt">{{ZONES[id-1].prix}}EUR<span>par ticket</span></p>
+          <p class="rightt">{{ZONES[id-1].prix}}EUR<span class="per-ticket">per ticket</span></p>
         </div>
         <div class="row">
           <select name="zone1" class="form-control">
@@ -42,19 +37,18 @@
         </div>
           <div class="row">
             <p>Service Fee + Tax</p>
-            <p class="right">29,00 EUR <span>par ticket</span></p>
+            <p class="rightt">29,00 EUR <span class="per-ticket">per ticket</span></p>
           </div>
           <div class="row">
             <p>100% Guarantee</p>
             <p class="tax">FREE</p>
           </div>
           <div class="row">
-            <p>Do you have a discount code ?</p>
+            <p id="blue">Do you have a discount code ?</p>
             <div class="discount-code">
               <label >Discount code</label>
               <div class="your-code">
-            <input type="text" id="code" name="name" required
-                   minlength="6" maxlength="10" size="30">
+            <input type="text" id="code" name="name" >
             <button class="apply">Apply</button>
               </div>
             </div>
@@ -85,5 +79,45 @@
           </div>-->
       </div>
     </div>
+  </div>
+  <div id="titre">
+  <h1>Contact Information</h1>
+  </div>
+  <div class="form">
+  <div class="form-group">
+    <div><label for="name" >First Name</label></div>
+    <input type="text" class="formc" id="name" name="name" placeholder="First Name e.g John, Mary">
+    <div><label for="email">Email</label></div>
+    <input type="text"  class="formc" id="email" name="alterEgo" placeholder="Your email@gmail.com">
+  </div>
+
+  <div class="form-group">
+    <div><label for="lastname">Last Name</label></div>
+    <input type="text" class="formc" id="lastname" name="alterEgo" placeholder="Last Name e.g John, Mary">
+    <div> <label for="phonenumber">Phone number</label></div>
+    <input type="text"  class="formc" id="phonenumber" name="alterEgo" placeholder="(+212 6 00 00 00 00)">
+  </div>
+  </div>
+  <div class="form">
+  <div class="form-group">
+    <div><label for="city">City</label></div>
+    <select class="formc"  id="city" name="power" placeholder="Alabama">
+      <option *ngFor="let city of ['Alabama','Marrakech','Rabat','Casa']" [value]="city">{{city}}</option>
+    </select>
+  </div>
+    <div class="form-group">
+      <div><label for="adress">Adress</label></div>
+      <input type="text" class="formc" id="adress" name="alterEgo" placeholder="Click to tap Address">
+    </div>
+    <div class="form-group">
+      <div><label for="zipcode">Zip Code</label></div>
+      <input type="text" class="formc" id="zipcode" name="alterEgo" placeholder="00000">
+    </div>
+  </div>
+  <div class="button">
+    <a href="payment">
+      <button class="payment">Proced to payment</button>
+    </a>
+
   </div>
 </section>
