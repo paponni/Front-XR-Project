@@ -15,6 +15,8 @@ export class CartService {
   apiUrl = 'http://localhost:8080';
   token : string;
   options : any;
+  token2:string;
+  headers:any;
 
 public cartItemList : any =[];
 public ticketList = new BehaviorSubject<any>([]);
@@ -59,13 +61,29 @@ public ticketList = new BehaviorSubject<any>([]);
     };
     return this.http.get<any>(this.apiUrl+'/api/v1/client/viewCart',this.options)
   }
-
-
-
-
-
-
-
+  getToken(){
+    return localStorage.getItem('jwt');
+  }
+  getHeader(){
+    return {headers : new HttpHeaders().set('Authorization','Bearer '+this.getToken())}
+  }
+  deleteTicket(ticketID:number){
+    this.token2 = localStorage.getItem('jwt');
+    this.headers = {
+      headers : new HttpHeaders().set('Authorization','Bearer '+this.token2)
+    }
+    return this.http.delete<any>(this.apiUrl+'/api/v1/client/delCart?bufcartID='+ticketID,this.headers)
+  }
+  updateCartItem(ticketID : number , quantite : number): Observable<any>{
+      console.log("updated quantity = "+quantite);
+      console.log("ticket id is "+ticketID)
+      
+    var map = {
+      "id" : ticketID,
+      "quantite" : quantite
+    }
+    return this.http.put<any>(this.apiUrl+'/api/v1/client/updateCart',map,this.getHeader());
+  }
 
 
 

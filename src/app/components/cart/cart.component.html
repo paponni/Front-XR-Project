@@ -14,15 +14,19 @@
         </thead>
         <tbody *ngFor="let c of listItems">
           <tr>
-            <td ></td>
+            <td >{{c.ticketName}}</td>
             <td>{{c.price}} DH</td>
             <td style="display: flex;justify-content: center;flex-direction: row;">
-                <button (click)="minus()" class="btn-quantity"><mat-icon>remove</mat-icon></button>
-                <input type="text" [value]="quantity" class="input-quantity">
-                <button (click)="plus()" class="btn-quantity"><mat-icon>add</mat-icon></button>
+              <input type="hidden" value="{{c.bufcartID}}" #ticket>
+              <input type="hidden" [value]="quantity" #quantity>
+                <button (click)="minus(ticket.value,quantity.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <input type="text" value="{{c.quantite}}" class="input-quantity">
+                
+                <button (click)="plus(ticket.value,quantity.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
+               
             </td>
             <td>{{c.price * c.quantite}}</td>
-            <td><mat-icon>delete</mat-icon></td>
+            <td><button class="btn-delete" (click)="deleteTicket(ticket.value)"><mat-icon>delete</mat-icon></button></td>
           </tr>
         </tbody>
        
@@ -34,7 +38,7 @@
         <div style="display: flex;
         justify-content: space-between; width: 300px;">
             <p class="cart-total-desc">Sub total  </p>
-            <p class="cart-total-desc">£316.55</p>
+            <p class="cart-total-desc">{{totalSum }} MAD</p>
 
         </div>
         <div style="display: flex;
@@ -46,7 +50,7 @@
         <div style="display: flex;
         justify-content: space-between; width: 300px;">
         <p class="cart-total-desc">Total </p>
-        <p class="cart-total-desc">£73.98 </p>
+        <p class="cart-total-desc">{{totalSum }} MAD</p>
 
         </div>
     </div>
