@@ -13,10 +13,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cartService.getTickets()
-    .subscribe((res)=>{
-      this.totalItem=res.length;
-    })
+   this.totalItem= this.cartService.getTickets();
+    
 
 
   }

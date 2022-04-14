@@ -1,8 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import { tick } from '@angular/core/testing';
 import {BehaviorSubject, Observable} from "rxjs";
-import { serverResponse } from '../models/serverResponse.model';
 
 
 @Injectable({
@@ -18,27 +16,67 @@ export class CartService {
   token2:string;
   headers:any;
 
-public cartItemList : any =[];
+public cartItemList : any = [];
 public ticketList = new BehaviorSubject<any>([]);
   constructor(private http: HttpClient) {
   }
 
   getTickets(){
-    return this.ticketList.asObservable();
+    let c=0;
+    for(var i=0 ; i< sessionStorage.length ; i++){
+     c +=Number(sessionStorage.getItem(i.toString()));
+    }
+    // return this.ticketList.asObservable();
+    return c;
   }
 
   setTickets(ticket : any){
     this.cartItemList.push(...ticket);
-    this.ticketList.next(ticket);
+    this.ticketList.next(this.cartItemList);
   }
 
 
   addtoCart(ticket:any){
+    // if(sessionStorage.length == 0){
+    //   sessionStorage.setItem(ticket.id,"1");
+
+    // }
+    // else{sessionStorage.key(i)
+    //   for(var i=0 ; i< sessionStorage.length ; i++){
+    //     if(sessionStorage.key(i) == ticket.id){
+    //       console.log("session storage "+sessionStorage.key(i))
+    //       let prevQte = sessionStorage.getItem(ticket.id.toString())
+    //       sessionStorage.setItem(ticket.id,(Number(prevQte) +1).toString());
+    //     }
+    //     else{
+    //       sessionStorage.setItem(ticket.id,"1");
+  
+    //     }
+    //    }
+
+    // }
+
+    if(sessionStorage.length == 0){
+      sessionStorage.setItem(ticket.id,"1")
+    }
+    else{
+
+      for(let i=0 ; i < sessionStorage.length ; i++){
+        if(sessionStorage.key(i) == ticket.id){
+          console.log("session storage"+sessionStorage.key(i))
+          let prevQte = sessionStorage.getItem(ticket.id.toString())
+          sessionStorage.setItem(ticket.id,(Number(prevQte) + 1).toString())
+        }
+        else{
+          sessionStorage.setItem(ticket.id,"1")
+        }
+      }
+    }
+  
+    
     // this.cartItemList.push(ticket);
     // this.ticketList.next(this.cartItemList);
-    // this.getTotalPrice();
-    // console.log(this.cartItemList);
-    // console.log()
+    
      this.token = localStorage.getItem('jwt');
     console.log(this.token)
      this.options = {
@@ -55,6 +93,7 @@ public ticketList = new BehaviorSubject<any>([]);
   }
 
   viewCart(){
+    this.getTickets();
     this.token = localStorage.getItem('jwt');
     this.options = {
       headers : new HttpHeaders().set('Authorization','Bearer '+this.token)

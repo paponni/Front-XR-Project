@@ -12,17 +12,16 @@
                     <th scope="col">Delete</th>
           </tr>
         </thead>
-        <tbody *ngFor="let c of listItems">
+        <tbody *ngFor="let c of listItems ">
           <tr>
             <td >{{c.ticketName}}</td>
             <td>{{c.price}} DH</td>
             <td style="display: flex;justify-content: center;flex-direction: row;">
               <input type="hidden" value="{{c.bufcartID}}" #ticket>
               <input type="hidden" [value]="quantity" #quantity>
-                <button (click)="minus(ticket.value,quantity.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
-                <input type="text" value="{{c.quantite}}" class="input-quantity">
-                
-                <button (click)="plus(ticket.value,quantity.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
+                <input type="text" value="{{c.quantite}}" class="input-quantity" #quantite>
+                <button (click)="minus(ticket.value,quantite.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <button (click)="plus(ticket.value,quantite.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
             <td>{{c.price * c.quantite}}</td>

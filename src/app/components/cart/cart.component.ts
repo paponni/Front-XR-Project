@@ -25,23 +25,28 @@ export class CartComponent implements OnInit {
       console.log(data['bufcartList']);
     })
   }
-
+  
 
   minus(ticketID:number,quantite:number){
-    if(this.quantity != 1){
-      this.quantity --;
-    quantite=this.quantity;
+    if(quantite != 1){
+    quantite=Number(quantite) - 1 ;
+    console.log(quantite)
     this.cartService.updateCartItem(ticketID,quantite)
-    .subscribe((data)=>console.log(data))
+    .subscribe((data)=>{
+      this.reloadComponent();
+    })
     }
   }
 
   plus(ticketID:number,quantite:number){
-    this.quantity++;
-    console.log(this.quantity)
-    quantite=this.quantity;
+    // this.quantity++;
+    
+    quantite = Number(quantite) + 1;
+    console.log(quantite)
     this.cartService.updateCartItem(ticketID,quantite)
-    .subscribe((data)=>console.log(data))
+    .subscribe((data)=>{
+      this.reloadComponent()
+    })
       
   }
 
@@ -58,6 +63,14 @@ export class CartComponent implements OnInit {
       });
     })
     
+  }
+
+
+  reloadComponent(){
+    let currentURL = this.router.url;
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation='reload';
+      this.router.navigate([currentURL]);
   }
 
 }
