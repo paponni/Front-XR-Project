@@ -12,6 +12,19 @@ export class CartComponent implements OnInit {
   quantity:number = 1;
   listItems : any; 
   totalSum : number = 0;
+  zoneValue : number = 1;
+  show : boolean = false;
+  ZONES = [
+    {   id : 11,
+        zone : "1"
+      },
+    { id : 12,
+      zone : "2"
+    },
+    {   id : 13,
+       zone : "3"
+      }
+    ]
   constructor(private router : Router , private cartService : CartService) { }
 
   ngOnInit(): void {
@@ -27,21 +40,28 @@ export class CartComponent implements OnInit {
   }
   
 
-  minus(ticket:number,quantite:number,ticketID:number){
+  changeZone(e){
+  if(e.target.value == 2){
+    this.show = true;
+  }
+
+  }
+
+  minus(ticket:number,quantite:number,ticketID:number,zone:any){
     if(quantite != 1){
     quantite=Number(quantite) - 1 ;
     console.log(quantite)
     console.log("ticket id : "+ticketID)
     let prevItem = sessionStorage.getItem(''+ticketID)
     sessionStorage.setItem(''+ticketID,''+(Number(prevItem) -1 ))
-    this.cartService.updateCartItem(ticket,quantite)
+    this.cartService.updateCartItem(ticket,quantite,zone)
     .subscribe((data)=>{
       this.reloadComponent();
     })
     }
   }
 
-  plus(ticket:number,quantite:number,ticketID:number){
+  plus(ticket:number,quantite:number,ticketID:number,zone:any){
     // this.quantity++;
     
     quantite = Number(quantite) + 1;
@@ -49,7 +69,7 @@ export class CartComponent implements OnInit {
     console.log("ticket id :"+ticketID)
     let prevItem = sessionStorage.getItem(''+ticketID);
     sessionStorage.setItem(''+ticketID,''+(Number(prevItem) + 1))
-    this.cartService.updateCartItem(ticket,quantite)
+    this.cartService.updateCartItem(ticket,quantite,zone)
     .subscribe((data)=>{
       this.reloadComponent()
     })

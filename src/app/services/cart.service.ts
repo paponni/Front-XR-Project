@@ -24,7 +24,6 @@ public cartItemList : any = [];
 public ticketList = new BehaviorSubject<any>([]);
   constructor(private http: HttpClient,private router : Router) {
   }
-//TODO make this function observe for changes
   getTickets(){
   
     let sum = 0 ;  
@@ -32,7 +31,6 @@ public ticketList = new BehaviorSubject<any>([]);
       sum += Number(sessionStorage.getItem(''+i)) ;
     }
     this.totalItem.next(sum)
-    // return this.ticketList.asObservable();
     return this.totalItem.asObservable();
   }
 
@@ -94,35 +92,25 @@ public ticketList = new BehaviorSubject<any>([]);
   }
   deleteTicket(ticket:number,ticketID:number){
     let prevValue = sessionStorage.getItem(''+ticketID);
-    // sessionStorage.removeItem(''+ticketID)
-    if(Number(prevValue) > 1){
-      sessionStorage.setItem(ticketID.toString(),''+(Number(prevValue) - 1 ))
-    }
-    else{
-      sessionStorage.removeItem(''+ticketID)
-    }
-    
-    
+    sessionStorage.removeItem(''+ticketID)
     this.token2 = localStorage.getItem('jwt');
     this.headers = {
       headers : new HttpHeaders().set('Authorization','Bearer '+this.token2)
     }
     return this.http.delete<any>(this.apiUrl+'/api/v1/client/delCart?bufcartID='+ticket,this.headers)
   }
-  updateCartItem(ticketID : number , quantite : number): Observable<any>{
+  updateCartItem(ticketID : number , quantite : number , zone : string): Observable<any>{
       console.log("updated quantity = "+quantite);
       console.log("ticket id is "+ticketID)
+      console.log("updated zone "+zone)
       
     var map = {
       "id" : ticketID,
-      "quantite" : quantite
+      "quantite" : quantite,
+      "zoneTicket" : zone
     }
     return this.http.put<any>(this.apiUrl+'/api/v1/client/updateCart',map,this.getHeader());
   }
-
-
-
-
 
 
   getTotalPrice(): number{

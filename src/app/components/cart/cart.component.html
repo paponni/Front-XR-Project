@@ -7,6 +7,7 @@
           <tr>
                     <th scope="col">Ticket Detail</th>
                     <th scope="col">Unit Price</th>
+                    <th scope="col">Zone</th>
                     <th scope="col">Quantite</th>
                     <th scope="col">Total</th>
                     <th scope="col">Delete</th>
@@ -16,13 +17,21 @@
           <tr>
             <td >{{c.ticketName}}</td>
             <td>{{c.price}} DH</td>
+            <td>
+              <select name="zones" (change)="changeZone($event)" class="zone-cart">
+                  <option>Select a zone</option>
+                  <option [value]="c.zoneTicket" #zone>
+                   {{c.zoneTicket}}
+                  </option>
+              </select>
+            </td>
             <td style="display: flex;justify-content: center;flex-direction: row;">
               <input type="hidden" value="{{c.bufcartID}}" #ticket>
               <input type="hidden" value="{{c.ticketID}}" #ticketID>
               <input type="hidden" [value]="quantity" #quantity>
                 <input type="text" value="{{c.quantite}}" class="input-quantity" #quantite>
-                <button (click)="minus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
-                <button (click)="plus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
+                <button (click)="minus(ticket.value,quantite.value,ticketID.value,zone.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <button (click)="plus(ticket.value,quantite.value,ticketID.value,zone.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
             <td>{{c.price * c.quantite}}</td>
