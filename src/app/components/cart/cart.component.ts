@@ -27,40 +27,45 @@ export class CartComponent implements OnInit {
   }
   
 
-  minus(ticketID:number,quantite:number){
+  minus(ticket:number,quantite:number,ticketID:number){
     if(quantite != 1){
     quantite=Number(quantite) - 1 ;
     console.log(quantite)
-    this.cartService.updateCartItem(ticketID,quantite)
+    console.log("ticket id : "+ticketID)
+    let prevItem = sessionStorage.getItem(''+ticketID)
+    sessionStorage.setItem(''+ticketID,''+(Number(prevItem) -1 ))
+    this.cartService.updateCartItem(ticket,quantite)
     .subscribe((data)=>{
       this.reloadComponent();
     })
     }
   }
 
-  plus(ticketID:number,quantite:number){
+  plus(ticket:number,quantite:number,ticketID:number){
     // this.quantity++;
     
     quantite = Number(quantite) + 1;
     console.log(quantite)
-    this.cartService.updateCartItem(ticketID,quantite)
+    console.log("ticket id :"+ticketID)
+    let prevItem = sessionStorage.getItem(''+ticketID);
+    sessionStorage.setItem(''+ticketID,''+(Number(prevItem) + 1))
+    this.cartService.updateCartItem(ticket,quantite)
     .subscribe((data)=>{
       this.reloadComponent()
     })
       
   }
 
-  deleteTicket(ticketID:number){
-    this.cartService.deleteTicket(ticketID)
+  deleteTicket(ticket:number,ticketID:number){
+    this.cartService.deleteTicket(ticket,ticketID)
     .subscribe((data) => {
-      
-      
-      const deletedTicket = this.listItems.find(u => u.bufcartID == ticketID);
+      const deletedTicket = this.listItems.find(u => u.bufcartID == ticket);
       const items = this.listItems.splice(this.listItems.indexOf(deletedTicket),1);
       items.forEach(value => {
         this.totalSum = this.totalSum -(value.quantite * value.price)
         
       });
+      this.reloadComponent();
     })
     
   }

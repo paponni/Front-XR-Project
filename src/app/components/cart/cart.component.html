@@ -18,14 +18,15 @@
             <td>{{c.price}} DH</td>
             <td style="display: flex;justify-content: center;flex-direction: row;">
               <input type="hidden" value="{{c.bufcartID}}" #ticket>
+              <input type="hidden" value="{{c.ticketID}}" #ticketID>
               <input type="hidden" [value]="quantity" #quantity>
                 <input type="text" value="{{c.quantite}}" class="input-quantity" #quantite>
-                <button (click)="minus(ticket.value,quantite.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
-                <button (click)="plus(ticket.value,quantite.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
+                <button (click)="minus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <button (click)="plus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
             <td>{{c.price * c.quantite}}</td>
-            <td><button class="btn-delete" (click)="deleteTicket(ticket.value)"><mat-icon>delete</mat-icon></button></td>
+            <td><button class="btn-delete" (click)="deleteTicket(ticket.value,ticketID.value)"><mat-icon>delete</mat-icon></button></td>
           </tr>
         </tbody>
        

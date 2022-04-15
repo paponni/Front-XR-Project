@@ -13,10 +13,12 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-   this.totalItem= this.cartService.getTickets();
-    
-
-
+   this.cartService.getTickets()
+   .subscribe((data)=>{
+    this.totalItem=data;
+   });
   }
 
+
+  
 }

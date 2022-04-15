@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Injectable} from '@angular/core';
+import { Router } from '@angular/router';
 import {BehaviorSubject, Observable} from "rxjs";
 
 
@@ -16,18 +17,23 @@ export class CartService {
   token2:string;
   headers:any;
 
+  public totalItem  = new BehaviorSubject<number>(0);
+  totalItem$ = this.totalItem.asObservable();
+
 public cartItemList : any = [];
 public ticketList = new BehaviorSubject<any>([]);
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private router : Router) {
   }
-
+//TODO make this function observe for changes
   getTickets(){
-    let c=0;
-    for(var i=0 ; i< sessionStorage.length ; i++){
-     c +=Number(sessionStorage.getItem(i.toString()));
+  
+    let sum = 0 ;  
+    for(let i = 1 ; i <= sessionStorage.length ; i++){
+      sum += Number(sessionStorage.getItem(''+i)) ;
     }
+    this.totalItem.next(sum)
     // return this.ticketList.asObservable();
-    return c;
+    return this.totalItem.asObservable();
   }
 
   setTickets(ticket : any){
@@ -37,46 +43,25 @@ public ticketList = new BehaviorSubject<any>([]);
 
 
   addtoCart(ticket:any){
-    // if(sessionStorage.length == 0){
-    //   sessionStorage.setItem(ticket.id,"1");
-
-    // }
-    // else{sessionStorage.key(i)
-    //   for(var i=0 ; i< sessionStorage.length ; i++){
-    //     if(sessionStorage.key(i) == ticket.id){
-    //       console.log("session storage "+sessionStorage.key(i))
-    //       let prevQte = sessionStorage.getItem(ticket.id.toString())
-    //       sessionStorage.setItem(ticket.id,(Number(prevQte) +1).toString());
-    //     }
-    //     else{
-    //       sessionStorage.setItem(ticket.id,"1");
-  
-    //     }
-    //    }
-
-    // }
-
+    let ticketExist = false;
     if(sessionStorage.length == 0){
       sessionStorage.setItem(ticket.id,"1")
     }
     else{
-
       for(let i=0 ; i < sessionStorage.length ; i++){
         if(sessionStorage.key(i) == ticket.id){
+          ticketExist=true;
           console.log("session storage"+sessionStorage.key(i))
-          let prevQte = sessionStorage.getItem(ticket.id.toString())
+          let prevQte = sessionStorage.getItem(sessionStorage.key(i))
           sessionStorage.setItem(ticket.id,(Number(prevQte) + 1).toString())
         }
-        else{
-          sessionStorage.setItem(ticket.id,"1")
-        }
       }
+      if(!ticketExist){
+        sessionStorage.setItem(ticket.id,"1")
+      }
+
     }
-  
-    
-    // this.cartItemList.push(ticket);
-    // this.ticketList.next(this.cartItemList);
-    
+    this.getTickets()  
      this.token = localStorage.getItem('jwt');
     console.log(this.token)
      this.options = {
@@ -88,7 +73,8 @@ public ticketList = new BehaviorSubject<any>([]);
     console.log(this.options)  
     console.log(ticket.id)
     return this.http.get<any>(this.apiUrl+'/api/v1/client/addToCart?id='+ticket.id,this.options)
-    .subscribe((data)=>console.log(data));
+    .subscribe((data)=>{console.log(data)}
+    ,(error)=>console.log(error));
 
   }
 
@@ -106,12 +92,22 @@ public ticketList = new BehaviorSubject<any>([]);
   getHeader(){
     return {headers : new HttpHeaders().set('Authorization','Bearer '+this.getToken())}
   }
-  deleteTicket(ticketID:number){
+  deleteTicket(ticket:number,ticketID:number){
+    let prevValue = sessionStorage.getItem(''+ticketID);
+    // sessionStorage.removeItem(''+ticketID)
+    if(Number(prevValue) > 1){
+      sessionStorage.setItem(ticketID.toString(),''+(Number(prevValue) - 1 ))
+    }
+    else{
+      sessionStorage.removeItem(''+ticketID)
+    }
+    
+    
     this.token2 = localStorage.getItem('jwt');
     this.headers = {
       headers : new HttpHeaders().set('Authorization','Bearer '+this.token2)
     }
-    return this.http.delete<any>(this.apiUrl+'/api/v1/client/delCart?bufcartID='+ticketID,this.headers)
+    return this.http.delete<any>(this.apiUrl+'/api/v1/client/delCart?bufcartID='+ticket,this.headers)
   }
   updateCartItem(ticketID : number , quantite : number): Observable<any>{
       console.log("updated quantity = "+quantite);
@@ -149,6 +145,13 @@ public ticketList = new BehaviorSubject<any>([]);
     this.ticketList.next(this.cartItemList);
   }
  
+
+  reloadComponent(){
+    let currentURL = this.router.url;
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation='reload';
+      this.router.navigate([currentURL]);
+  }
 
 }
 
