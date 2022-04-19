@@ -1,0 +1,107 @@
+<section class="zone-section" xmlns:color="http://www.w3.org/1999/xhtml">
+    <div id="zone" class="container-zone">
+      <p class="zone-header">Personal details</p>
+      <p></p>
+      <p class="zone-proccess">Choose a game <img src="../../../assets/img/tiret.svg" alt="">
+        <span> Choose a zone</span> <img src="../../../assets/img/tiret.svg" alt="">
+        <span> Personal details</span> <img src="../../../assets/img/tiret.svg" alt="">
+        <span style="color: rgb(112, 110, 110);"> Payement</span> </p>
+    </div>
+    <div class="zonet">
+      <div class="affiche-zone">
+        <div class="zoneContainer">
+          <div class="zoneI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%)   ,url(../../../assets/img/el-clasico.jpeg) center no-repeat','background-size':'1133.83px 683.25px'}">
+            <div class="prix-single-zone">
+              <p style="width: 200px;
+                  text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Insert your personal details</p><br>
+              <p>Category : LIGA</p>
+            </div>
+            <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
+          </div>
+        </div>
+        <div class="footer-zone">
+          <div class="infos">
+          <div class="titre">
+            <label id="ticket-price-h">Your Ticket Price :</label>
+          </div>
+          <div class="row">
+           <div class="row-zone">
+            <label>Zone{{ZONES[id-1].id}}</label>
+            <select name="zone1" class="form-control">
+              <option value="z1">1</option>
+              <option value="z2">2</option>
+              <option value="z4">4</option>
+            </select>
+           </div>
+           <div>
+            <p class="rightt">{{ZONES[id-1].prix}}MAD <span class="per-ticket">per ticket</span></p>
+           </div>
+          </div>
+
+            <div class="row">
+              <p>Service Fee + Tax</p>
+              <p class="rightt">29 MAD <span class="per-ticket">per ticket</span></p>
+            </div>
+            <div class="row">
+              <p>100% Guarantee</p>
+              <p class="tax">FREE</p>
+            </div>
+            <div class="row">
+              <p id="blue">Do you have a discount code ?</p>
+              <div class="discount-code">
+                <label >Discount code</label>
+                <div class="your-code">
+              <input type="text" id="code" name="name" class="input-text-discount">
+              <button class="apply">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p>TOTAL</p>
+              <p class="approx">(approx € 74.00) £ 73.98</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="titre">
+    <h1 style="margin-top: 22px;  font-family: 'Neue Radial-A-Regular';">Contact Information</h1>
+    </div>
+    <div class="form">
+    <div class="form-group">
+      <div><label for="name" >First Name</label></div>
+      <input type="text" class="formc" id="name" name="name" placeholder="First Name e.g John, Mary">
+      <div><label for="email">Email</label></div>
+      <input type="text"  class="formc" id="email" name="alterEgo" placeholder="Your email@gmail.com">
+    </div>
+  
+    <div class="form-group">
+      <div><label for="lastname">Last Name</label></div>
+      <input type="text" class="formc" id="lastname" name="alterEgo" placeholder="Last Name e.g John, Mary">
+      <div> <label for="phonenumber">Phone number</label></div>
+      <input type="text"  class="formc" id="phonenumber" name="alterEgo" placeholder="(+212 6 00 00 00 00)">
+    </div>
+    </div>
+    <div class="form">
+    <div class="form-group">
+      <div><label for="city">City</label></div>
+      <select class="formc"  id="city" name="power" placeholder="Alabama">
+        <option *ngFor="let city of ['Alabama','Marrakech','Rabat','Casa']" [value]="city">{{city}}</option>
+      </select>
+    </div>
+      <div class="form-group">
+        <div><label for="adress">Adress</label></div>
+        <input type="text" class="formc" id="adress" name="alterEgo" placeholder="Click to tap Address">
+      </div>
+      <div class="form-group">
+        <div><label for="zipcode">Zip Code</label></div>
+        <input type="text" class="formc" id="zipcode" name="alterEgo" placeholder="00000">
+      </div>
+    </div>
+    <div class="button">
+      <a href="payment">
+        <button class="payment">Proced to payment</button>
+      </a>
+  
+    </div>
+  </section>

@@ -1,26 +1,26 @@
 
-<section class="ticket-section"> 
+<section class="ticket-section">
 
     <div id="ticket" class="container-ticket">
         <p class="ticket-header">Upcoming events </p>
         <p class="ticket-desc">Take a look on available tickets et get yours now before sold out</p>7
         <p></p>
-        <p class="ticket-proccess">Choose a game <img src="../../../assets/img/tiret.svg" alt=""> 
+        <p class="ticket-proccess">Choose a game <img src="../../../assets/img/tiret.svg" alt="">
          <span style="color: rgb(112, 110, 110);"> Choose a zone</span> <img src="../../../assets/img/tiret.svg" alt="">
          <span style="color: rgb(112, 110, 110);"> Personal details</span> <img src="../../../assets/img/tiret.svg" alt="">
          <span style="color: rgb(112, 110, 110);"> Payement</span> </p>
     </div>
     <div class="tickett">
     <div class="affiche-ticket">
-      
+
         <div class="ticketContainer">
-          <div class="ticketI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%)   ,url(../../../assets/img/'+TICKETS[id-1].image+') center no-repeat','background-size':'1133.83px 683.25px'}">
+          <div class="ticketI" [ngStyle]="{background: 'linear-gradient(360deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%)   ,url(../../../assets/img/'+TICKETS[id-1].image+') center no-repeat','background-size':'1133.83px 683.25px'}">
               <div class="prix-single-ticket">
                 <p style="width: 200px;
                 text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Starting from 29.00 EUR</p><br>
                 <p>Category : LIGA</p>
               </div>
-              
+
               <div class="param-single-ticket">
                 <p style="width: 86px;height: 72px;
                 text-align: center;"><img src="../../../assets/img/hq.svg" alt=""> High quality</p>
@@ -30,13 +30,13 @@
               <div class="desc-single-ticket">
                 <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
                 <p id="info-single-match">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                 
+
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p> 
-                   <button class="btn-add" routerLink="/ticket/1/zone">Buy now <img src="../../../../assets/img/cart.svg"/></button>
+                   cupidatat non proident</p>
+                   <button class="btn-add" routerLink="/ticket/{{id}}/zone">Buy now <img src="../../../../assets/img/cart.svg"/></button>
 
               </div>
-             
+
         </div>
         <!-- <div class="footer-ticket">
             <div class="nbrTicket">

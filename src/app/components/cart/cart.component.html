@@ -20,8 +20,8 @@
             <td>
               <select name="zones" (change)="changeZone($event)" class="zone-cart">
                   <option>Select a zone</option>
-                  <option [value]="c.zoneTicket" #zone>
-                   {{c.zoneTicket}}
+                  <option [value]="z.id" *ngFor="let z of ZONES" #zone>
+                   {{z.zone}}
                   </option>
               </select>
             </td>
@@ -30,8 +30,8 @@
               <input type="hidden" value="{{c.ticketID}}" #ticketID>
               <input type="hidden" [value]="quantity" #quantity>
                 <input type="text" value="{{c.quantite}}" class="input-quantity" #quantite>
-                <button (click)="minus(ticket.value,quantite.value,ticketID.value,zone.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
-                <button (click)="plus(ticket.value,quantite.value,ticketID.value,zone.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
+                <button (click)="minus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>remove</mat-icon></button>
+                <button (click)="plus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
             <td>{{c.price * c.quantite}}</td>
@@ -68,7 +68,9 @@
     <input type="text" class="input-checkout">
     <button class="apply-btn">Apply</button>
     <div>
-        <button class="btn-checkout">CHECK OUT</button>
+        <a href="/payment">
+          <button class="btn-checkout">CHECK OUT</button>
+        </a>
     </div>
 
 </div>

@@ -1,13 +1,13 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'mg-zone',
-  templateUrl: './zone.component.html',
-  styleUrls: ['./zone.component.scss']
+  selector: 'mg-payment',
+  templateUrl: './payment.component.html',
+  styleUrls: ['./payment.component.scss']
 })
-export class ZoneComponent implements OnInit {
-  public id:any;
+export class PaymentComponent implements OnInit {
+  public id_ticket:any;
   TICKETS = [
     {
       id : 1,
@@ -78,8 +78,7 @@ export class ZoneComponent implements OnInit {
       image : 'christian-pulisic-chelsea.jpg'
     }
   ];
-  @ViewChild('pRef') pRef: ElementRef;
-  Zones!:any;
+  public id_zone:any;
   ZONES = [
     {
       id : 1,
@@ -91,11 +90,11 @@ export class ZoneComponent implements OnInit {
     },
     {
       id : 3,
-      prix:30.00
+      prix:40.00
     },
     {
       id : 4,
-      prix:30.00
+      prix:60.00
     },
 
   ];
@@ -103,7 +102,8 @@ export class ZoneComponent implements OnInit {
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id=this.route.snapshot.paramMap.get('id');
+    this.id_zone=this.route.snapshot.paramMap.get('id');
+    this.id_ticket=this.route.snapshot.paramMap.get('id');
   }
 
 }

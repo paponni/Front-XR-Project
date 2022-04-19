@@ -15,13 +15,13 @@ export class CartComponent implements OnInit {
   zoneValue : number = 1;
   show : boolean = false;
   ZONES = [
-    {   id : 11,
+    {   id : 1,
         zone : "1"
       },
-    { id : 12,
+    { id : 2,
       zone : "2"
     },
-    {   id : 13,
+    {   id : 3,
        zone : "3"
       }
     ]
@@ -47,21 +47,21 @@ export class CartComponent implements OnInit {
 
   }
 
-  minus(ticket:number,quantite:number,ticketID:number,zone:any){
+  minus(ticket:number,quantite:number,ticketID:number){
     if(quantite != 1){
     quantite=Number(quantite) - 1 ;
     console.log(quantite)
     console.log("ticket id : "+ticketID)
     let prevItem = sessionStorage.getItem(''+ticketID)
     sessionStorage.setItem(''+ticketID,''+(Number(prevItem) -1 ))
-    this.cartService.updateCartItem(ticket,quantite,zone)
+    this.cartService.updateCartItem(ticket,quantite)
     .subscribe((data)=>{
       this.reloadComponent();
     })
     }
   }
 
-  plus(ticket:number,quantite:number,ticketID:number,zone:any){
+  plus(ticket:number,quantite:number,ticketID:number){
     // this.quantity++;
     
     quantite = Number(quantite) + 1;
@@ -69,7 +69,7 @@ export class CartComponent implements OnInit {
     console.log("ticket id :"+ticketID)
     let prevItem = sessionStorage.getItem(''+ticketID);
     sessionStorage.setItem(''+ticketID,''+(Number(prevItem) + 1))
-    this.cartService.updateCartItem(ticket,quantite,zone)
+    this.cartService.updateCartItem(ticket,quantite)
     .subscribe((data)=>{
       this.reloadComponent()
     })

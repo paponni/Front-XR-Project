@@ -11,6 +11,10 @@ import { CompteComponent } from './components/compte/compte.component';
 import { AchatsComponent } from './components/achats/achats.component';
 import { LoginActivateGuard } from './guards/login-activate.guard';
 import { CartComponent } from './components/cart/cart.component';
+import { StreamingComponent } from './components/streaming/streaming.component';
+
+import { PersonalDetailsComponent } from './components/personal-details/personal-details.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 
 
@@ -30,6 +34,15 @@ const routes: Routes = [
   },
   {
     path: 'cart', component: CartComponent
+  },
+  {
+    path: 'streaming', component: StreamingComponent
+  },
+  {
+    path: ':id/personal-details', component: PersonalDetailsComponent
+  },
+  {
+    path: 'payment', component: PaymentComponent
   },
   {
     path: 'compte', component: CompteComponent,canActivate:[LoginActivateGuard]

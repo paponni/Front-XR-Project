@@ -1,3 +1,4 @@
+
 .container-ticket{
     // margin-top: 130px;
     display: flex;
@@ -5,6 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    
 
   }
   .ticket-header{
@@ -44,9 +46,12 @@
     padding: 9px;
     width: 1133.83px;
     height: 683.25px;
-      box-shadow: inset 0px 144px 134px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 52px;
-  background: linear-gradient(180deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
+    box-shadow: inset 0px 144px 134px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 52px;
+    background: linear-gradient(360deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%) ;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 54px;
+  
   }
 
   .footer-ticket{
@@ -66,13 +71,13 @@
     color: #FFF;
     display: flex;
     justify-content: space-between;
-font-family: 'neueRadial-A-ExtraLight';
-font-style: normal;
-font-weight: 200;
-font-size: 24px;
-line-height: 26px;
-letter-spacing: -0.022em;
-color: #FFFFFF;
+    font-family: 'neueRadial-A-ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.022em;
+    color: #FFFFFF;
   }
   .param-single-ticket{
     margin-top: 33px;
@@ -103,7 +108,7 @@ color: #FFFFFF;
   font-family: 'Neue Radial-A-Regular';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   text-align: justify;
   color: #FFFFFF;
@@ -115,8 +120,6 @@ font-style: normal;
 font-weight: 300;
 font-size: 18.35px;
 line-height: 0px;
-/* identical to box height, or 0% */
-
 display: flex;
 align-items: center;
 text-align: center;
@@ -143,18 +146,18 @@ color: #FFFFFF;
     color: #fff;
     border: 1px #fff solid;
     cursor: pointer;
-    width: 167px;
-    height: 25px;
+    width: 200px;
+    height: 30px;
     background: linear-gradient(180deg, #7267CB 0%, #7F71B4 100%);
     border-radius: 4.52367px;
     margin-top: 22px;
     font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-    font-size: 11.3092px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
     float: right;
     margin-right: 30px;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
 
   }
  

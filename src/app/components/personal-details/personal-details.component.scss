@@ -1,0 +1,386 @@
+.zone-section{
+    background-image: url("src/assets/img/img_3.png");
+  }
+  .container-zone{
+    // margin-top: 130px;
+    display: flex;
+    margin-left: 45px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+  }
+  .zone-header{
+    margin-top: 104px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Neue Radial A Light';
+  }
+  .zone-proccess{
+    margin-left: 115px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Neue Radial A Light';
+  }
+  .zone-desc{
+    color: #fff;
+    font-family: 'Neue Radial A Light';
+    font-style: normal;
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .zonet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    flex-wrap: wrap;
+  }
+  .affiche-zone{
+    margin: 30px 8px 30px 8px;
+  }
+  
+  .zoneI{
+    padding: 9px;
+    width: 1133.83px;
+    height: 200px;
+    box-shadow: inset 0px 144px 134px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 52px;
+    background: linear-gradient(180deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
+  }
+  
+  .footer-zone{
+    width: 1125.69px;
+    height: 500.38px;
+    margin-top: 60px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 13px;
+    color: #FFFFFF;
+  }
+  .apply{
+    color: white;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: transparent;
+    margin-left: 10px;
+    font-family: 'neueRadial-A-ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    height: 42px;
+    width: 98px;
+  }
+::placeholder{
+    color: #BCBEC0;
+    margin-left: 7px;
+    font-family: 'Neue Radial A Light';
+  }
+  .input-text-discount{
+    background: rgba(255, 255, 255, 0.2);
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 8px;
+height: 42px;
+width: 150px;
+
+  }
+  .prix-single-zone{
+    margin-top: 24px;
+    margin-left: 25px;
+    margin-right: 38px;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'neueRadial-A-ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.022em;
+    color: #FFFFFF;
+  }
+  .param-single-zone{
+    margin-top: 33px;
+    color: #fff;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    float: right;
+  }
+  /*.desc-single-zone{
+    margin-top: 382px;
+    color: #fff;
+  }*/
+  #nom-single-match{
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 0px;
+    text-align: justify;
+    color: #FFFFFF;
+    margin-top: 24px;
+    margin-left: 34px;
+  }
+  #info-single-match{
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+    color: #FFFFFF;
+    margin-top: 37px;
+  }
+  .btn-add-cart{
+    font-family: 'neueRadial-A-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18.35px;
+    line-height: 0px;
+    /* identical to box height, or 0% */
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    color: #FFFFFF;
+  
+  }
+  .nbrTicket{
+    font-weight: 500 !important;
+    font-style: normal;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 11.2401px;
+    line-height: 0px;
+    color: #5143C4;
+    margin: 30px;
+  
+  
+  }
+  .prix{
+    margin: 17px;
+  }
+  /*.btn-add{
+    color: #fff;
+    border: 1px #fff solid;
+    cursor: pointer;
+    width: 167px;
+    height: 25px;
+    background: linear-gradient(180deg, #7267CB 0%, #7F71B4 100%);
+    border-radius: 4.52367px;
+    margin-top: 22px;
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+    font-size: 11.3092px;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 12px;
+  }*/
+  mat-icon{
+    transform: scale(0.75);
+    color: #fff;
+    line-height: 0 !important;
+  }
+  
+  .right{
+    position:relative;
+    margin-left: 950px;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  .rightt{
+    margin-left: 910px;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 0px;
+    /* or 0% */
+  
+    text-align: justify;
+  
+    color: #FFFFFF;
+  }
+  .tax{
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    text-align: justify;
+    color: #FFFFFF;
+    float:right;
+    position:relative;
+    margin-left: 1000px;
+  }
+  .discount-code{
+    position: relative;
+    margin-left: 750px;
+  }
+  .zone-image{
+    width:400px;
+    height:300px;
+    margin:10px;
+  }
+  .row{
+    margin-top: 12px;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    font-weight: 200;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    text-align: justify;
+    color: #FFFFFF;
+  }
+  .row-zone{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group input::placeholder{
+    font-family: 'neueRadial-A-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    opacity: 0.6;
+  }
+  select option{
+    //background-color: #23272b;
+    color: #23272b;
+  
+  }
+  input:focus, button:focus{
+    outline: none;
+    border: 1px solid #8BD6C8;
+  }
+  #blue{
+    color: #8BD6C8;
+  }
+  .form{
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+  .per-ticket{
+    font-family: 'neueRadial-B-BlackItalic';
+    font-style: normal;
+    font-weight: 10;
+    font-size: 14px;
+    line-height: 0px;
+    text-align: justify;
+    color: #FFFFFF;
+  }
+  .infos{
+    margin: 35px;
+  }
+  .form-control{
+    width: 69.77px;
+    height: 27.93px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  #code{
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  .approx{
+    position: absolute;
+    width: 280px;
+    height: 0px;
+    margin-top:10px;
+    font-family: 'Neue Radial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 0px;
+    text-align: justify;
+    color: #FFFFFF;
+    margin-left:850px ;
+  }
+  #titre{
+    color:white;
+    margin-left: 220px;
+  }
+  .form{
+    margin-left: 200px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .form-group{
+    margin: 20px;
+  }
+  .formc{
+    margin-bottom: 15px;
+    width: 400.52px;
+    height:50.86px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: white;
+  }
+  .formgroup{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 100px;
+  }
+  #city{
+    width: 114px;
+    height: 50.86px;
+  }
+  #zipcode{
+    width:250px;
+  }
+  .payment{
+    position: relative;
+    width: 229px;
+    height: 46px;
+    border-color: transparent;
+    background: linear-gradient(180deg, #4ECB71 0%, #4ECB71 35%, #4ECB71 100%);
+    border-radius: 8px;
+    color:white;
+    margin-bottom: 50px;
+  }
+  .button{
+    margin-left: 840px;
+  }
+  .titre label{
+    font-family: 'neueRadial-A-Bold';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.022em;
+    color: #FFFFFF;
+    
+  }
+

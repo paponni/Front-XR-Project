@@ -26,7 +26,10 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ZoneComponent } from './components/zone/zone.component';
 import { CompteComponent } from './components/compte/compte.component';
 import { AchatsComponent } from './components/achats/achats.component';
-import {CartComponent} from './components/cart/cart.component'
+import {CartComponent} from './components/cart/cart.component';
+import { PersonalDetailsComponent } from './components/personal-details/personal-details.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { StreamingComponent } from './components/streaming/streaming.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import {CartComponent} from './components/cart/cart.component'
     ZoneComponent,
     CompteComponent,
     AchatsComponent,
-    CartComponent
+    CartComponent,
+    PersonalDetailsComponent,
+    PaymentComponent,
+    StreamingComponent
   
   
   ],

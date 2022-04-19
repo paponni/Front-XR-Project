@@ -1,0 +1,97 @@
+
+.container-stream{
+    // margin-top: 130px;
+    display: flex;
+    margin-left: 45px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+  }.stream-header{
+  
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Neue Radial A Light';
+    margin-top: 78px;
+  }
+  .stream-desc{
+    color: #fff;
+  
+    font-family: 'Neue Radial A Light';
+    font-style: normal;
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .streamm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    flex-wrap: wrap;
+  }
+  .affiche-stream{
+    display: flex;
+    margin-left: 45px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .stream-team{
+    margin-top: 50px;
+    font-family: 'neueRadial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 0px;
+  /* or 0% */
+    text-align: justify;
+    color: #FFFFFF;
+  }
+  .views{
+    margin-top: 17px;
+    font-family: 'neueRadial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 0px;
+    /* identical to box height, or 0% */
+    text-align: justify;
+    color: #FFFFFF;
+  }
+  .image-match{
+    margin-top: 45px;
+  
+    width: 60px;
+    height: 60px;
+  }
+  .titre{
+    position: absolute;
+    width: 677.56px;
+    height: 20.36px;
+    left: 133.82px;
+    top: 860.8px;
+  
+    font-family: 'neueRadial-A-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 0px;
+    /* or 0% */
+  
+    text-align: justify;
+  
+    color: #FFFFFF;
+  
+  }
+  .stream-detail{
+    margin-top: 40px;
+    display: flex;
+    margin-left: 45px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+  }

@@ -99,15 +99,14 @@ public ticketList = new BehaviorSubject<any>([]);
     }
     return this.http.delete<any>(this.apiUrl+'/api/v1/client/delCart?bufcartID='+ticket,this.headers)
   }
-  updateCartItem(ticketID : number , quantite : number , zone : string): Observable<any>{
+  updateCartItem(ticketID : number , quantite : number): Observable<any>{
       console.log("updated quantity = "+quantite);
       console.log("ticket id is "+ticketID)
-      console.log("updated zone "+zone)
       
     var map = {
       "id" : ticketID,
       "quantite" : quantite,
-      "zoneTicket" : zone
+    
     }
     return this.http.put<any>(this.apiUrl+'/api/v1/client/updateCart',map,this.getHeader());
   }
