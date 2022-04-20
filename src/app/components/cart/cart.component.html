@@ -16,11 +16,12 @@
         <tbody *ngFor="let c of listItems ">
           <tr>
             <td >{{c.ticketName}}</td>
-            <td>{{c.price}} DH</td>
+            <td>{{c.price * zoneCoef}} DH</td>
             <td>
-              <select name="zones" (change)="changeZone($event)" class="zone-cart">
-                  <option>Select a zone</option>
-                  <option [value]="z.id" *ngFor="let z of ZONES" #zone>
+              <input type="hidden" value="{{c.ticketID}}" #refTicket>
+              <select name="zones" (change)="changeZone($event,refTicket.value)" class="zone-cart">
+                  <!-- <option>Select a zone</option> -->
+                  <option  [value]="z.id" *ngFor="let z of ZONES">
                    {{z.zone}}
                   </option>
               </select>
@@ -34,7 +35,7 @@
                 <button (click)="plus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
-            <td>{{c.price * c.quantite}}</td>
+            <td>{{c.price * c.quantite * zoneCoef}}</td>
             <td><button class="btn-delete" (click)="deleteTicket(ticket.value,ticketID.value)"><mat-icon>delete</mat-icon></button></td>
           </tr>
         </tbody>
@@ -47,7 +48,7 @@
         <div style="display: flex;
         justify-content: space-between; width: 300px;">
             <p class="cart-total-desc">Sub total  </p>
-            <p class="cart-total-desc">{{totalSum }} MAD</p>
+            <p class="cart-total-desc">{{totalSum * zoneCoef }} MAD</p>
 
         </div>
         <div style="display: flex;
@@ -59,7 +60,7 @@
         <div style="display: flex;
         justify-content: space-between; width: 300px;">
         <p class="cart-total-desc">Total </p>
-        <p class="cart-total-desc">{{totalSum }} MAD</p>
+        <p class="cart-total-desc">{{totalSum * zoneCoef}} MAD</p>
 
         </div>
     </div>
@@ -68,7 +69,7 @@
     <input type="text" class="input-checkout">
     <button class="apply-btn">Apply</button>
     <div>
-        <a href="/payment">
+        <a href="/payment/{{totalSum}}">
           <button class="btn-checkout">CHECK OUT</button>
         </a>
     </div>

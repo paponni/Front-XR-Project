@@ -14,6 +14,8 @@ export class CartComponent implements OnInit {
   totalSum : number = 0;
   zoneValue : number = 1;
   show : boolean = false;
+  zoneCoef: number = 1;
+  arr = [];
   ZONES = [
     {   id : 1,
         zone : "1"
@@ -32,18 +34,19 @@ export class CartComponent implements OnInit {
     .subscribe((data)=>{
       this.listItems=data['bufcartList'];
       this.listItems.forEach(value => {
-        this.totalSum = this.totalSum + (value.quantite * value.price)
+        this.totalSum = this.totalSum + (value.quantite * value.price * this.zoneCoef)
         
       });
+      this.cartService.sendTotal(this.totalSum);
       console.log(data['bufcartList']);
     })
   }
   
 
-  changeZone(e){
-  if(e.target.value == 2){
-    this.show = true;
-  }
+  changeZone(e,refTicket:number){
+    this.zoneCoef = e.target.value;
+    console.log("target id :"+refTicket)
+    console.log(e.target.value)
 
   }
 
@@ -74,6 +77,11 @@ export class CartComponent implements OnInit {
       this.reloadComponent()
     })
       
+  }
+
+  updateZone(zone:number){
+    console.log("the zone will updated to this :"+zone)
+
   }
 
   deleteTicket(ticket:number,ticketID:number){

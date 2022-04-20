@@ -42,7 +42,7 @@ const routes: Routes = [
     path: ':id/personal-details', component: PersonalDetailsComponent
   },
   {
-    path: 'payment', component: PaymentComponent
+    path: 'payment/:total', component: PaymentComponent
   },
   {
     path: 'compte', component: CompteComponent,canActivate:[LoginActivateGuard]

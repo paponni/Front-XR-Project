@@ -16,6 +16,7 @@ export class CartService {
   options : any;
   token2:string;
   headers:any;
+  message:number;
 
   public totalItem  = new BehaviorSubject<number>(0);
   totalItem$ = this.totalItem.asObservable();
@@ -138,6 +139,16 @@ public ticketList = new BehaviorSubject<any>([]);
       this.router.routeReuseStrategy.shouldReuseRoute = () => false;
       this.router.onSameUrlNavigation='reload';
       this.router.navigate([currentURL]);
+  }
+
+
+  sendTotal(total:number){
+    this.message = total;
+
+  }
+
+  getTotal(){
+    return this.message;
   }
 
 }

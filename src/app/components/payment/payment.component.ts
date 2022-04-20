@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'mg-payment',
@@ -8,6 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class PaymentComponent implements OnInit {
   public id_ticket:any;
+  total:number
   TICKETS = [
     {
       id : 1,
@@ -66,17 +68,7 @@ export class PaymentComponent implements OnInit {
       prix : 500,
       image : 'christian-pulisic-chelsea.jpg'
     },
-    {
-      id  :6,
-      nomMatch : "Real Madrid vs Valencia FC",
-      dateMatch : "Sunday 19 mai 2022",
-      heureMatch : "15h00",
-      lieuMatch : "Estadio el madrigol",
-      nbrTickets : "360",
-      photo : "../../../../assets/img/ticket1.png",
-      prix : 500,
-      image : 'christian-pulisic-chelsea.jpg'
-    }
+    
   ];
   public id_zone:any;
   ZONES = [
@@ -99,11 +91,15 @@ export class PaymentComponent implements OnInit {
 
   ];
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.id_zone=this.route.snapshot.paramMap.get('id');
     this.id_ticket=this.route.snapshot.paramMap.get('id');
+    this.route.params.subscribe(params=>{
+      this.total = params['total'];
+      console.log("total :"+this.total);
+    })
   }
 
 }
