@@ -9,12 +9,15 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartComponent implements OnInit {
 
+
+  ticketID : number =1;
   quantity:number = 1;
   listItems : any; 
   totalSum : number = 0;
   zoneValue : number = 1;
   show : boolean = false;
   zoneCoef: number = 1;
+   map1 = new Map();
   arr = [];
   ZONES = [
     {   id : 1,
@@ -33,8 +36,12 @@ export class CartComponent implements OnInit {
     this.cartService.viewCart()
     .subscribe((data)=>{
       this.listItems=data['bufcartList'];
+      
       this.listItems.forEach(value => {
-        this.totalSum = this.totalSum + (value.quantite * value.price * this.zoneCoef)
+        this.ticketID=value.ticketID;
+        console.log("list item :"+value.ticketID);
+        this.map1.set(value.ticketID ,1);
+        this.totalSum = this.totalSum + (value.quantite * value.price)
         
       });
       this.cartService.sendTotal(this.totalSum);
@@ -44,6 +51,14 @@ export class CartComponent implements OnInit {
   
 
   changeZone(e,refTicket:number){
+    this.ticketID=refTicket;
+    this.map1.set(refTicket,e.target.value);
+    const iterator1 = this.map1.keys();
+    for(const [key , valeur] of this.map1){
+      if(key == refTicket) this.map1.set(refTicket,e.target.value)
+    }
+  
+      
     this.zoneCoef = e.target.value;
     console.log("target id :"+refTicket)
     console.log(e.target.value)

@@ -13,10 +13,10 @@
                     <th scope="col">Delete</th>
           </tr>
         </thead>
-        <tbody *ngFor="let c of listItems ">
+        <tbody *ngFor="let c of listItems" >
           <tr>
             <td >{{c.ticketName}}</td>
-            <td>{{c.price * zoneCoef}} DH</td>
+            <td>{{c.price}} DH</td>
             <td>
               <input type="hidden" value="{{c.ticketID}}" #refTicket>
               <select name="zones" (change)="changeZone($event,refTicket.value)" class="zone-cart">
@@ -35,7 +35,7 @@
                 <button (click)="plus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
-            <td>{{c.price * c.quantite * zoneCoef}}</td>
+            <td>{{c.price * c.quantite}}</td>
             <td><button class="btn-delete" (click)="deleteTicket(ticket.value,ticketID.value)"><mat-icon>delete</mat-icon></button></td>
           </tr>
         </tbody>
@@ -48,7 +48,7 @@
         <div style="display: flex;
         justify-content: space-between; width: 300px;">
             <p class="cart-total-desc">Sub total  </p>
-            <p class="cart-total-desc">{{totalSum * zoneCoef }} MAD</p>
+            <p class="cart-total-desc">{{totalSum }} MAD</p>
 
         </div>
         <div style="display: flex;
@@ -60,7 +60,7 @@
         <div style="display: flex;
         justify-content: space-between; width: 300px;">
         <p class="cart-total-desc">Total </p>
-        <p class="cart-total-desc">{{totalSum * zoneCoef}} MAD</p>
+        <p class="cart-total-desc">{{totalSum }} MAD</p>
 
         </div>
     </div>
