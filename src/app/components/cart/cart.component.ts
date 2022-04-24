@@ -41,7 +41,7 @@ export class CartComponent implements OnInit {
         this.ticketID=value.ticketID;
         console.log("list item :"+value.ticketID);
         this.map1.set(value.ticketID ,1);
-        this.totalSum = this.totalSum + (value.quantite * value.price)
+        this.totalSum = this.totalSum + (value.quantite * value.price * this.zoneCoef)
         
       });
       this.cartService.sendTotal(this.totalSum);

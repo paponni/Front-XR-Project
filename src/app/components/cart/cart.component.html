@@ -35,7 +35,7 @@
                 <button (click)="plus(ticket.value,quantite.value,ticketID.value)" class="btn-quantity"><mat-icon>add</mat-icon></button>
                
             </td>
-            <td>{{c.price * c.quantite}}</td>
+            <td>{{c.price * c.quantite * zoneCoef}}</td>
             <td><button class="btn-delete" (click)="deleteTicket(ticket.value,ticketID.value)"><mat-icon>delete</mat-icon></button></td>
           </tr>
         </tbody>

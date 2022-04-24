@@ -1,3 +1,4 @@
+
 <section class="zone-section" xmlns:color="http://www.w3.org/1999/xhtml">
     <div id="zone" class="container-zone">
       <p class="zone-header">Payment</p>
@@ -24,12 +25,16 @@
           <div class="form-group">
             <input type="checkbox" id="card" name="card" checked>
             <label for="card"><img class="card-icon" src="../../../assets/img/img_8.png" alt=""></label>
-            <input type="checkbox" id="paypal" name="paypal">
-            <label for="paypal"><img class="paypal-icon" src="../../../assets/img/img_7.png" alt=""></label>
+            <!-- <input type="checkbox" id="paypal" name="paypal"> -->
+            
+              <div #paypal></div>
+              <!-- <button id="myPaypalButton"><img class="paypal-icon" src="../../../assets/img/img_7.png" alt=""></button> -->
+            
             <div><label for="name" >Name on card</label></div>
             <input type="text" class="formc" id="name" name="name">
             <div><label for="email">Card number</label></div>
             <input type="text"  class="formc" id="email" name="alterEgo">
+            <div ></div>
           </div>
             <div class="right-form">
               <div><h2 style="  font-family: 'Neue Radial-A-Regular';">Order Summary</h2></div>
@@ -80,7 +85,7 @@
           </div>
             <div class="col-lg-6 float-end">
               <div>{{ total }} MAD</div>
-              <div>£3.45</div>
+              <div>30 MAD</div>
               <div>Free</div>
               <div>{{ total }} MAD</div>
             </div>

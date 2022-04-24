@@ -15,12 +15,20 @@ import { StreamingComponent } from './components/streaming/streaming.component';
 
 import { PersonalDetailsComponent } from './components/personal-details/personal-details.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
+import { ErrorComponent } from './core/error/error.component';
 
 
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent
+  },
+  {
+    path: '404', component: NotFoundComponent
+  },
+  {
+    path: 'error', component: ErrorComponent
   },
   
   {

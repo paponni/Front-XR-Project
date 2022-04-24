@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { CartService } from 'src/app/services/cart.service';
+import {render} from 'creditcardpayments/creditCardPayments';
+import { ToastrService } from 'ngx-toastr';
 
+declare var paypal;
 @Component({
   selector: 'mg-payment',
   templateUrl: './payment.component.html',
@@ -9,66 +12,10 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class PaymentComponent implements OnInit {
   public id_ticket:any;
-  total:number
+  total:number;
+   paypal:any = global;
+  
   TICKETS = [
-    {
-      id : 1,
-      nomMatch : "Real Madrid vs Valencia FC",
-      dateMatch : "Sunday 19 mai 2022",
-      heureMatch : "15h00",
-      lieuMatch : "Estadio el madrigol",
-      nbrTickets : "360",
-      photo : "../../../../assets/img/ticket1.png",
-      prix : 500,
-      image : 'christian-pulisic-chelsea.jpg'
-    },
-    {
-      id : 2,
-      nomMatch : "Real Madrid vs Valencia FC",
-      dateMatch : "Sunday 19 mai 2022",
-      heureMatch : "15h00",
-      lieuMatch : "Estadio el madrigol",
-      nbrTickets : "360",
-      photo : "../../../../assets/img/ticket1.png",
-      prix : 500,
-      image : 'barca.jpg'
-
-    },
-    {
-      id : 3,
-      nomMatch : "Real Madrid vs Valencia FC",
-      dateMatch : "Sunday 19 mai 2022",
-      heureMatch : "15h00",
-      lieuMatch : "Estadio el madrigol",
-      nbrTickets : "360",
-      photo : "../../../../assets/img/ticket1.png",
-      prix : 500,
-      image : 'el-clasico.jpeg'
-
-    },
-    {
-      id : 4,
-      nomMatch : "Real Madrid vs Valencia FC",
-      dateMatch : "Sunday 19 mai 2022",
-      heureMatch : "15h00",
-      lieuMatch : "Estadio el madrigol",
-      nbrTickets : "360",
-      photo : "../../../../assets/img/ticket1.png",
-      prix : 500,
-      image : 'christian-pulisic-chelsea.jpg'
-    },
-    {
-      id : 5,
-      nomMatch : "Real Madrid vs Valencia FC",
-      dateMatch : "Sunday 19 mai 2022",
-      heureMatch : "15h00",
-      lieuMatch : "Estadio el madrigol",
-      nbrTickets : "360",
-      photo : "../../../../assets/img/ticket1.png",
-      prix : 500,
-      image : 'christian-pulisic-chelsea.jpg'
-    },
-    
   ];
   public id_zone:any;
   ZONES = [
@@ -91,15 +38,56 @@ export class PaymentComponent implements OnInit {
 
   ];
 
-  constructor(private route:ActivatedRoute,private cartService:CartService) { }
+  @ViewChild('paypal',{static : true }) paypalElement : ElementRef
+  constructor(private route:ActivatedRoute,private cartService:CartService, private toastrService : ToastrService) {
+  
+   }
 
   ngOnInit(): void {
+    
+    window.paypal
+    .Buttons(
+      {
+        style : {
+          layout : 'horizontal'
+        },
+        createOrder : (data , actions) => {
+          return actions.order.create({
+            purchase_units : [{
+              amount : {
+                value : this.total
+              }
+            }]
+          })
+        },
+        onApprove : (data , actions)=>{
+          var self= this;
+          return actions.order.capture().then(function(orderData){
+            self.successPayment();
+            // sessionStorage.clear();
+               actions.redirect('http://localhost:4200/achats');
+          })
+        }
+      },
+     
+    ).render(this.paypalElement.nativeElement)
     this.id_zone=this.route.snapshot.paramMap.get('id');
     this.id_ticket=this.route.snapshot.paramMap.get('id');
     this.route.params.subscribe(params=>{
       this.total = params['total'];
       console.log("total :"+this.total);
     })
+  }
+
+
+  successPayment(){
+    this.toastrService.success("Payment successful ","Success")
+
+  }
+
+  errorPayment(){
+    this.toastrService.error("Error payment ","Error")
+
   }
 
 }
