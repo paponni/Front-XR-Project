@@ -1,3 +1,2 @@
 
-
 declare var paypal;

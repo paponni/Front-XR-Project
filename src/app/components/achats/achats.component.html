@@ -23,11 +23,11 @@
                 <p> <img src="../../../assets/img/tick-square.svg" alt=""> Notifications</p>
             </a>
         </div>
-        <div class="core-achat">
+        <div class="core-achat" >
             <p id="core-head">Derniers matchs achetés</p>
             <div class="match-achete">
                 <div class="match1">
-                    <p id="nom-match">Barcelona vs madrid</p>
+                    <p id="nom-match"></p>
                     <p id="date-match">05 Mars 2022 at 5 p.m.</p>
                 </div>
 
@@ -45,14 +45,14 @@
                         <th scope="col">Ticket</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody *ngFor="let l of listItems">
                       <tr>
-                        <td >Barcelona vs Real Madrid</td>
+                        <td >{{l.ticketName}}</td>
                         <td>Liga BBVA</td>
-                        <td>Tuesday 21 Mai 2022  at 9pm</td>
-                        <td>29.00 EUR</td>
+                        <td>{{l.dateAdded}}</td>
+                        <td>{{l.price}} MAD</td>
                         <td>Stade Mohammed V, Casablanca</td>
-                        <td><a href="">View Ticket</a></td>
+                        <td><a href="/ticket/{{l.ticketID}}">View Ticket</a></td>
                       </tr>
                     </tbody>
                    

@@ -4,7 +4,6 @@ import { CartService } from 'src/app/services/cart.service';
 import {render} from 'creditcardpayments/creditCardPayments';
 import { ToastrService } from 'ngx-toastr';
 
-declare var paypal;
 @Component({
   selector: 'mg-payment',
   templateUrl: './payment.component.html',
@@ -12,9 +11,8 @@ declare var paypal;
 })
 export class PaymentComponent implements OnInit {
   public id_ticket:any;
-  total:number;
-   paypal:any = global;
-  
+  listItems : any;
+  total:number;  
   TICKETS = [
   ];
   public id_zone:any;
@@ -38,13 +36,21 @@ export class PaymentComponent implements OnInit {
 
   ];
 
-  @ViewChild('paypal',{static : true }) paypalElement : ElementRef
+  @ViewChild('paypal',{static : true })
+   paypalElement : ElementRef;
+
+
   constructor(private route:ActivatedRoute,private cartService:CartService, private toastrService : ToastrService) {
   
    }
 
+   
+
   ngOnInit(): void {
-    
+    this.cartService.viewCart()
+    .subscribe((data)=>{
+      this.listItems = data['bufcartList'];
+    });
     window.paypal
     .Buttons(
       {
@@ -65,7 +71,7 @@ export class PaymentComponent implements OnInit {
           return actions.order.capture().then(function(orderData){
             self.successPayment();
             // sessionStorage.clear();
-               actions.redirect('http://localhost:4200/achats');
+              //  actions.redirect('http://localhost:4200/achats');
           })
         }
       },
@@ -77,6 +83,11 @@ export class PaymentComponent implements OnInit {
       this.total = params['total'];
       console.log("total :"+this.total);
     })
+    
+  }
+  ngAfterViewInit(){
+    
+     
   }
 
 
@@ -91,3 +102,9 @@ export class PaymentComponent implements OnInit {
   }
 
 }
+
+interface customWindow extends Window{
+ paypal ?: any
+}
+
+declare const window : customWindow;

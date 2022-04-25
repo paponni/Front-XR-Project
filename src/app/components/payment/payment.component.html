@@ -8,7 +8,7 @@
         <span> Personal details</span> <img src="../../../assets/img/tiret.svg" alt="">
         <span> Payement</span> </p>
     </div>
-    <div class="zonet">
+    <div class="zonet" >
       <div class="affiche-zone">
         <div class="zoneContainer">
           <div class="zoneI" [ngStyle]="{background: 'linear-gradient(180deg, rgba(43, 56, 225, 0.406) 0%, rgba(60, 66, 144, 0.182) 100%)   ,url(../../../assets/img/el-clasico.jpeg) center no-repeat','background-size':'1133.83px 683.25px'}">
@@ -17,7 +17,7 @@
                   text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Payement</p><br>
               <p>Category : LIGA</p>
             </div>
-            <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
+            <p id ="nom-single-match">Match day</p>
           </div>
         </div>
         <div class="form">
@@ -36,10 +36,10 @@
             <input type="text"  class="formc" id="email" name="alterEgo">
             <div ></div>
           </div>
-            <div class="right-form">
+            <div class="right-form" >
               <div><h2 style="  font-family: 'Neue Radial-A-Regular';">Order Summary</h2></div>
-              <img width="500" height="220" src="../../../assets/img/img_6.png" alt="">
-              <div class="nombre-ticket"><label for="nombre-ticket">Barcelona F.C vs Real Madrid</label>
+              <!-- <img width="500" height="220" src="../../../assets/img/img_6.png" alt=""> -->
+              <div class="nombre-ticket" *ngFor="let l of listItems"><label for="nombre-ticket">{{l.ticketName}}</label>
                 <input type="number" class="formc" value="1" id="nombre-ticket" name="tentacles" min="1" max="100">
               </div>
             </div>
