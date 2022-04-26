@@ -18,4 +18,11 @@ export class TicketService {
      );
      
    }
+
+   public getTicket(id : number){
+
+    return this.http.get<ticket>(
+      'http://localhost:8080/api/v1/admin/tickets/'+id
+    )
+   }
 }

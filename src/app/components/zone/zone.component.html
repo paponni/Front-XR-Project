@@ -20,7 +20,7 @@
             <p>Category : LIGA</p>
 
           </div>
-          <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
+          <p id ="nom-single-match">{{Tickets.nomMatch}}</p>
 
         </div>
       </div>
@@ -40,7 +40,7 @@
           </div>
           <div class="col-md-3 col-xs-6" >
             <div class="price" *ngFor="let z of ZONES">
-             <p id="number">{{z.prix}} MAD &nbsp;<span id="indice-ticket">per ticket</span></p>
+             <p id="number">{{Tickets.prix * z.prix}} MAD &nbsp;<span id="indice-ticket">per ticket</span></p>
             </div>
           </div>
           <div class="col-md-3 col-xs-6" >

@@ -16,7 +16,7 @@
                   text-align: center;"> <img src="../../../assets/img/local_offer.svg" alt=""> Insert your personal details</p><br>
               <p>Category : LIGA</p>
             </div>
-            <p id ="nom-single-match">Barcelona F.C vs Real Madrid</p>
+            <p id ="nom-single-match">{{ticket.nomMatch}}</p>
           </div>
         </div>
         <div class="footer-zone">
@@ -34,7 +34,7 @@
             </select>
            </div>
            <div>
-            <p class="rightt">{{ZONES[id-1].prix}}MAD <span class="per-ticket">per ticket</span></p>
+            <p class="rightt">{{ZONES[id-1].prix * ticket.prix}}MAD <span class="per-ticket">per ticket</span></p>
            </div>
           </div>
 
@@ -58,15 +58,17 @@
             </div>
             <div class="row">
               <p>TOTAL</p>
-              <p class="approx">(approx € 74.00) £ 73.98</p>
+              <p class="approx">  {{ticket.prix + 29}} MAD</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="titre">
-    <h1 style="margin-top: 22px;  font-family: 'Neue Radial-A-Regular';">Contact Information</h1>
-    </div>
+   
+    <div *ngIf="!loginStatus$">
+      <div id="titre">
+        <h1 style="margin-top: 22px;  font-family: 'Neue Radial-A-Regular';">Contact Information</h1>
+        </div>
     <div class="form">
     <div class="form-group">
       <div><label for="name" >First Name</label></div>
@@ -98,10 +100,12 @@
         <input type="text" class="formc" id="zipcode" name="alterEgo" placeholder="00000">
       </div>
     </div>
+  </div>
     <div class="button">
-      <a href="payment">
+      <a href="/payment/{{ticket.prix}}">
         <button class="payment">Proced to payment</button>
       </a>
   
     </div>
+  
   </section>

@@ -44,7 +44,7 @@ const routes: Routes = [
     path: 'cart', component: CartComponent
   },
   {
-    path: 'streaming', component: StreamingComponent
+    path: 'streaming', component: StreamingComponent,canActivate:[LoginActivateGuard]
   },
   {
     path: ':id/personal-details', component: PersonalDetailsComponent

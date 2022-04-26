@@ -1,5 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
+import { TicketService } from 'src/app/services/ticket.service';
 
 @Component({
   selector: 'mg-zone',
@@ -8,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ZoneComponent implements OnInit {
   public id:any;
+  Tickets : any;
   TICKETS = [
     {
       id : 1,
@@ -83,27 +86,32 @@ export class ZoneComponent implements OnInit {
   ZONES = [
     {
       id : 1,
-      prix : 29.00
+      prix : 1
     },
     {
       id : 2,
-      prix:30.00
+      prix:2
     },
     {
       id : 3,
-      prix:30.00
+      prix:3
     },
     {
       id : 4,
-      prix:30.00
+      prix:4
     },
 
   ];
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,private ticketService : TicketService) { }
 
   ngOnInit(): void {
     this.id=this.route.snapshot.paramMap.get('id');
+    this.ticketService.getTicket(this.id)
+    .subscribe((data)=>{
+      this.Tickets = data;
+      console.log(this.Tickets);
+    })
     console.log(this.id);
   }
 

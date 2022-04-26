@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { CartService } from 'src/app/services/cart.service';
 import { TicketService } from 'src/app/services/ticket.service';
 
@@ -48,7 +49,7 @@ export class TicketComponent implements OnInit {
     }
   ];
 
-  constructor(private ticketService : TicketService,private cartService : CartService) { }
+  constructor(private ticketService : TicketService,private cartService : CartService,private toastrService :ToastrService) { }
 
   ngOnInit(): void {
   console.log(this.TICKETS[0].image)
@@ -66,6 +67,24 @@ export class TicketComponent implements OnInit {
   addtoCart(t:any){
   console.log(t);
   this.cartService.addtoCart(t);
+  this.infoAddToCart();
+}
+
+
+infoAddToCart(){
+
+  this.toastrService.info("item added to cart","",{
+    positionClass : "toast-bottom-right",
+    closeButton : true,
+    
+  });
+}
+
+errorAddToCart(){
+
+  this.toastrService.error("error adding item to cart","error",{
+    positionClass : 'toast-bottom-right',
+  });
 }
 
 }
