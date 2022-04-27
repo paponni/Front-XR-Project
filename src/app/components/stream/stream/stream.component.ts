@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'mg-stream',
@@ -25,6 +26,19 @@ export class StreamComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    ScrollReveal({
+      reset : true,
+      distance : '80px',
+      duration : 2500,
+      delay : 400
+    });
+
+    ScrollReveal().reveal('.text-replay');
+    ScrollReveal().reveal('.desc-replay');
+    ScrollReveal().reveal('.replay-container',{delay : 400,origin : 'top'});
+
+
+    
   }
 
 }

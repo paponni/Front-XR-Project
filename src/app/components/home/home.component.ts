@@ -4,6 +4,7 @@ import {ProductModelServer, serverResponse} from "../../models/product.model";
 import {CartService} from "../../services/cart.service";
 import {Router} from "@angular/router";
 import { TicketService } from 'src/app/services/ticket.service';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'mg-home',
@@ -23,6 +24,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    ScrollReveal({
+      reset : true,
+      distance : '80px',
+      duration : 2500,
+      delay : 400
+    });
+    ScrollReveal().reveal('#welcome',{delay : 450});
+    ScrollReveal().reveal('.image-welcome',{opacity: 0.5,rotate: {
+      z: 70
+  }});
+
+    ScrollReveal().reveal('.image-welcome,#desc-text,#btn-homepage',{delay : 400,origin : 'left',});
+
+
     this.productService.getAllProducts(8).subscribe((prods: serverResponse ) => {
       this.products = prods.products;
       console.log(this.products);
