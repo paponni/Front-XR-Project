@@ -13,6 +13,7 @@ export class PaymentComponent implements OnInit {
   public id_ticket:any;
   listItems : any;
   total:number;  
+  tax :number = 29;
   TICKETS = [
   ];
   public id_zone:any;
